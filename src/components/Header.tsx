@@ -35,11 +35,6 @@ export default function Header() {
               </a>
             </li>
             <li>
-              <a href="#experiencia" className="hover:opacity-80">
-                Experiência
-              </a>
-            </li>
-            <li>
               <a href="#processo" className="hover:opacity-80">
                 Como trabalhamos
               </a>
