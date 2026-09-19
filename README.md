@@ -32,7 +32,21 @@ npm run start
 
 ## Importante — formulário de contato
 
-O formulário na seção “Contato” é **apenas visual** e **não envia dados**. Ele existe para demonstrar o design. Uma integração real poderá ser adicionada futuramente (API/Email/CRM).
+Por padrão, o envio fica desabilitado se a variável `RESEND_API_KEY` não estiver presente. Para ativar:
+
+1. Crie uma conta no Resend e obtenha a `RESEND_API_KEY`.
+2. (Recomendado) Verifique um domínio/remetente e defina `RESEND_FROM` (ex.: `Koller Nexus <no-reply@kollernexus.com.br>`).
+3. Opcional: ajuste `CONTACT_TO` (padrão: `contato@kollernexus.com.br`).
+4. Execute o projeto com as variáveis:
+
+```bash
+export RESEND_API_KEY=...
+export RESEND_FROM="Koller Nexus <no-reply@kollernexus.com.br>"
+export CONTACT_TO=contato@kollernexus.com.br
+npm run dev
+```
+
+Endpoint: `POST /api/contact` com `{ name, email, message }`.
 
 ## Marca
 
