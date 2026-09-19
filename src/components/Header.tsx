@@ -25,6 +25,11 @@ export default function Header() {
               </a>
             </li>
             <li>
+              <a href="#projetos" className="hover:opacity-80">
+                Projetos
+              </a>
+            </li>
+            <li>
               <a href="#processo" className="hover:opacity-80">
                 Como trabalhamos
               </a>
