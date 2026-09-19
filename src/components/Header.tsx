@@ -30,6 +30,11 @@ export default function Header() {
               </a>
             </li>
             <li>
+              <a href="#open-source" className="hover:opacity-80">
+                Open Source
+              </a>
+            </li>
+            <li>
               <a href="#processo" className="hover:opacity-80">
                 Como trabalhamos
               </a>

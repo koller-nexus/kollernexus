@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import Projects from "@/components/Projects";
+import OpenSource from "@/components/OpenSource";
 
 export default function Home() {
   return (
@@ -105,6 +106,9 @@ export default function Home() {
 
       {/* Projetos */}
       <Projects />
+
+      {/* Open Source */}
+      <OpenSource />
 
       {/* Processo */}
       <section id="processo" className="section">
