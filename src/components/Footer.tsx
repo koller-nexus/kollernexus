@@ -1,3 +1,5 @@
+import LinkedInIcon from "@/icons/LinkedIn";
+
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
@@ -6,9 +8,19 @@ export default function Footer() {
         <p className="text-muted-foreground">
           © {year} Koller Nexus. Todos os direitos reservados.
         </p>
-        <p className="text-muted-foreground">
+        <p className="text-muted-foreground flex items-center gap-4">
           <a href="https://kollernexus.com.br" className="hover:opacity-80" target="_blank" rel="noreferrer">
             kollernexus.com.br
+          </a>
+          <a
+            href="https://www.linkedin.com/in/williamkoller"
+            className="hover:opacity-80 inline-flex items-center gap-1"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Perfil no LinkedIn"
+          >
+            <LinkedInIcon className="h-4 w-4" />
+            LinkedIn
           </a>
         </p>
       </div>

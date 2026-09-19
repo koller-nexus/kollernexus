@@ -2,6 +2,7 @@ import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import Projects from "@/components/Projects";
 import OpenSource from "@/components/OpenSource";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   return (
@@ -109,6 +110,9 @@ export default function Home() {
 
       {/* Open Source */}
       <OpenSource />
+
+      {/* Experiência */}
+      <Experience />
 
       {/* Processo */}
       <section id="processo" className="section">
