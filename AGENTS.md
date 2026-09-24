@@ -28,6 +28,10 @@ This project uses Next.js 16, React 19, and Tailwind CSS 4. Prefer TypeScript an
 - Preserve the existing visual language and component patterns when changing UI. Make interfaces accessible and responsive, including semantic HTML, keyboard behavior, visible focus, and reduced-motion preferences where relevant.
 - For substantial UI design or review work, use the [Impeccable skill](.agents/skills/impeccable/SKILL.md) and follow its project-context and craft guidance. Do not invoke its UI workflow for unrelated backend changes.
 
+### TypeSafe
+
+- When a feature needs programmable judgments (routing, ranking, extraction, verification, or replacing a prompt-and-parse step), use the [TypeSafe skill](.agents/skills/typesafe-ai/SKILL.md) and follow its live docs before writing an integration.
+
 ### Verification
 
 - Run the narrowest relevant checks after code changes. Available project scripts include `npm run lint` and `npm run build`.

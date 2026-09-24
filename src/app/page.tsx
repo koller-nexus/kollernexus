@@ -2,6 +2,12 @@ import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import Projects from "@/components/Projects";
 import OpenSource from "@/components/OpenSource";
+import LinkedInIcon from "@/icons/LinkedIn";
+import WhatsAppIcon from "@/icons/WhatsApp";
+
+const whatsappMessage =
+  "Olá, William. Vi o site da Koller Nexus e gostaria de conversar sobre um projeto.";
+const whatsappHref = `https://wa.me/5541988682343?text=${encodeURIComponent(whatsappMessage)}`;
 
 const services = [
   {
@@ -123,14 +129,34 @@ export default function Home() {
               <li>Aplicativos mobile</li>
               <li>DevOps e inteligência artificial</li>
             </ul>
-            <a
-              href="https://github.com/williamkoller"
-              className="profile-link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
+            <div className="profile-links">
+              <a
+                href="https://github.com/williamkoller"
+                className="profile-link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/williamkoller"
+                className="profile-icon-link"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+              >
+                <LinkedInIcon aria-hidden="true" />
+              </a>
+              <a
+                href={whatsappHref}
+                className="profile-icon-link profile-icon-link-whatsapp"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="WhatsApp"
+              >
+                <WhatsAppIcon />
+              </a>
+            </div>
           </aside>
         </div>
       </section>
