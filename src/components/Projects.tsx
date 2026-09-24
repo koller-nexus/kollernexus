@@ -54,48 +54,36 @@ export default async function Projects() {
   const repos = sortAndTake(await fetchRepos());
 
   return (
-    <section id="projetos" className="section">
+    <section id="projetos" className="section projects-section">
       <div className="container">
-        <div className="max-w-2xl">
-          <p className="eyebrow mb-3">Projetos</p>
-          <h2 className="text-3xl font-semibold tracking-tight">
-            Código aberto que impulsiona nossas soluções.
-          </h2>
-          <p className="mt-3 text-[var(--color-muted)]">
-            Repositórios públicos do GitHub de <strong>@williamkoller</strong>, ordenados por estrelas.
+        <div className="section-intro">
+          <h2>Projetos públicos no GitHub.</h2>
+          <p>
+            Repositórios de <strong>@williamkoller</strong>, atualizados a
+            partir do GitHub e organizados por estrelas.
           </p>
         </div>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="project-list">
           {repos.map((repo) => (
-            <a
-              key={repo.id}
-              href={repo.html_url}
-              target="_blank"
-              rel="noreferrer"
-              className="card hover:translate-y-[-2px] transition-transform"
-            >
-              <div className="flex items-start justify-between gap-3">
-                <h3 className="text-lg font-semibold">{repo.name}</h3>
-                <span
-                  className="inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs"
-                  style={{ border: "1px solid var(--color-border)" }}
-                >
-                  <StarIcon />
-                  {repo.stargazers_count}
+            <li key={repo.id} className="project-row">
+              <div className="project-copy">
+                <h3>
+                  <a href={repo.html_url} target="_blank" rel="noreferrer">
+                    {repo.name}
+                  </a>
+                </h3>
+                {repo.description && <p>{repo.description}</p>}
+              </div>
+              <div className="project-meta">
+                <span>{repo.language ?? "Linguagem não informada"}</span>
+                <span>
+                  <StarIcon /> {repo.stargazers_count} estrelas
                 </span>
               </div>
-              {repo.description && (
-                <p className="mt-2 text-sm text-[var(--color-muted)]">
-                  {repo.description}
-                </p>
-              )}
-              <div className="mt-4 text-sm text-[var(--color-muted)]">
-                {repo.language ?? "—"}
-              </div>
-            </a>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );
@@ -115,4 +103,3 @@ function StarIcon() {
     </svg>
   );
 }
-

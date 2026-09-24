@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-24T00:00:00-03:00",
+  "title": "Design System: Koller Nexus",
+  "extensions": {
+    "colorMeta": {
+      "page": { "role": "neutral", "displayName": "Branco de página", "canonical": "#ffffff", "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(35% 0 0)", "oklch(45% 0 0)", "oklch(55% 0 0)", "oklch(65% 0 0)", "oklch(80% 0 0)", "oklch(95% 0 0)"] },
+      "surface": { "role": "neutral", "displayName": "Azul névoa", "canonical": "#f3f7fb", "tonalRamp": ["oklch(15% 0.01 250)", "oklch(25% 0.01 250)", "oklch(35% 0.01 250)", "oklch(45% 0.01 250)", "oklch(55% 0.01 250)", "oklch(65% 0.01 250)", "oklch(80% 0.01 250)", "oklch(95% 0.01 250)"] },
+      "surface-strong": { "role": "neutral", "displayName": "Azul névoa profundo", "canonical": "#eaf1f8", "tonalRamp": ["oklch(15% 0.015 250)", "oklch(25% 0.015 250)", "oklch(35% 0.015 250)", "oklch(45% 0.015 250)", "oklch(55% 0.015 250)", "oklch(65% 0.015 250)", "oklch(80% 0.015 250)", "oklch(95% 0.015 250)"] },
+      "ink": { "role": "neutral", "displayName": "Tinta marinho", "canonical": "#172b46", "tonalRamp": ["oklch(15% 0.035 250)", "oklch(25% 0.035 250)", "oklch(35% 0.035 250)", "oklch(45% 0.035 250)", "oklch(55% 0.035 250)", "oklch(65% 0.035 250)", "oklch(80% 0.035 250)", "oklch(95% 0.035 250)"] },
+      "body": { "role": "neutral", "displayName": "Texto ardósia", "canonical": "#34445a", "tonalRamp": ["oklch(15% 0.025 250)", "oklch(25% 0.025 250)", "oklch(35% 0.025 250)", "oklch(45% 0.025 250)", "oklch(55% 0.025 250)", "oklch(65% 0.025 250)", "oklch(80% 0.025 250)", "oklch(95% 0.025 250)"] },
+      "muted": { "role": "neutral", "displayName": "Texto secundário", "canonical": "#5d6d81", "tonalRamp": ["oklch(15% 0.02 250)", "oklch(25% 0.02 250)", "oklch(35% 0.02 250)", "oklch(45% 0.02 250)", "oklch(55% 0.02 250)", "oklch(65% 0.02 250)", "oklch(80% 0.02 250)", "oklch(95% 0.02 250)"] },
+      "brand": { "role": "primary", "displayName": "Azul de ação", "canonical": "#0b4688", "tonalRamp": ["oklch(15% 0.08 245)", "oklch(25% 0.08 245)", "oklch(35% 0.08 245)", "oklch(45% 0.08 245)", "oklch(55% 0.08 245)", "oklch(65% 0.08 245)", "oklch(80% 0.08 245)", "oklch(95% 0.08 245)"] },
+      "brand-hover": { "role": "primary", "displayName": "Azul de ação escuro", "canonical": "#073a74", "tonalRamp": ["oklch(15% 0.075 245)", "oklch(25% 0.075 245)", "oklch(35% 0.075 245)", "oklch(45% 0.075 245)", "oklch(55% 0.075 245)", "oklch(65% 0.075 245)", "oklch(80% 0.075 245)", "oklch(95% 0.075 245)"] },
+      "line": { "role": "neutral", "displayName": "Linha azul-cinza", "canonical": "#d7e0e9", "tonalRamp": ["oklch(15% 0.01 250)", "oklch(25% 0.01 250)", "oklch(35% 0.01 250)", "oklch(45% 0.01 250)", "oklch(55% 0.01 250)", "oklch(65% 0.01 250)", "oklch(80% 0.01 250)", "oklch(95% 0.01 250)"] },
+      "focus": { "role": "primary", "displayName": "Azul de foco", "canonical": "#4c9be0", "tonalRamp": ["oklch(15% 0.09 245)", "oklch(25% 0.09 245)", "oklch(35% 0.09 245)", "oklch(45% 0.09 245)", "oklch(55% 0.09 245)", "oklch(65% 0.09 245)", "oklch(80% 0.09 245)", "oklch(95% 0.09 245)"] },
+      "field-border": { "role": "neutral", "displayName": "Borda de campo", "canonical": "#bbc8d6", "tonalRamp": ["oklch(15% 0.015 250)", "oklch(25% 0.015 250)", "oklch(35% 0.015 250)", "oklch(45% 0.015 250)", "oklch(55% 0.015 250)", "oklch(65% 0.015 250)", "oklch(80% 0.015 250)", "oklch(95% 0.015 250)"] },
+      "success": { "role": "tertiary", "displayName": "Verde de sucesso", "canonical": "#176143", "tonalRamp": ["oklch(15% 0.07 160)", "oklch(25% 0.07 160)", "oklch(35% 0.07 160)", "oklch(45% 0.07 160)", "oklch(55% 0.07 160)", "oklch(65% 0.07 160)", "oklch(80% 0.07 160)", "oklch(95% 0.07 160)"] },
+      "error": { "role": "tertiary", "displayName": "Vermelho de erro", "canonical": "#a53131", "tonalRamp": ["oklch(15% 0.1 25)", "oklch(25% 0.1 25)", "oklch(35% 0.1 25)", "oklch(45% 0.1 25)", "oklch(55% 0.1 25)", "oklch(65% 0.1 25)", "oklch(80% 0.1 25)", "oklch(95% 0.1 25)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Título principal do hero." },
+      "headline": { "displayName": "Headline", "purpose": "Títulos de seção e apresentação." },
+      "title": { "displayName": "Title", "purpose": "Títulos de itens de conteúdo." },
+      "body": { "displayName": "Body", "purpose": "Texto corrido e descrições." },
+      "label": { "displayName": "Label", "purpose": "Identificadores curtos em maiúsculas." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "state-transition", "value": "150ms ease", "purpose": "Mudanças de cor de controles e links." },
+      { "name": "smooth-scroll", "value": "scroll-behavior: smooth", "purpose": "Navegação por âncoras, desativada quando há preferência por movimento reduzido." }
+    ],
+    "breakpoints": [
+      { "name": "tablet", "value": "900px" },
+      { "name": "mobile", "value": "640px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ação de contato ou envio, preenchida em azul de marca.",
+      "html": "<button class=\"ds-button-primary\">Enviar</button>",
+      "css": ".ds-button-primary { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 0.6rem; border: 1px solid #0b4688; border-radius: 6px; padding: 0.7rem 1.1rem; background: #0b4688; color: #ffffff; font: 600 0.9rem/1.35 Geist, Arial, sans-serif; text-align: center; text-decoration: none; transition: background-color 150ms ease, border-color 150ms ease; cursor: pointer; } .ds-button-primary:hover { border-color: #073a74; background: #073a74; } .ds-button-primary:focus-visible { outline: 2px solid #4c9be0; outline-offset: 3px; } .ds-button-primary:active { background: #073a74; }"
+    },
+    {
+      "name": "Text Link",
+      "kind": "custom",
+      "description": "Link de apoio em azul com sublinhado no hover.",
+      "html": "<a class=\"ds-text-link\" href=\"#projetos\">Ver projetos públicos <span aria-hidden=\"true\">→</span></a>",
+      "css": ".ds-text-link { display: inline-flex; align-items: center; gap: 0.4rem; color: #0b4688; font: 600 0.92rem/1.4 Geist, Arial, sans-serif; text-decoration: none; text-underline-offset: 0.22em; transition: color 150ms ease; } .ds-text-link:hover { color: #073a74; text-decoration: underline; } .ds-text-link:focus-visible { outline: 2px solid #4c9be0; outline-offset: 3px; }"
+    },
+    {
+      "name": "Profile Panel",
+      "kind": "card",
+      "description": "Painel branco e plano para identificar o perfil profissional e suas áreas.",
+      "html": "<article class=\"ds-profile-panel\"><strong>William Koller</strong><p>Engenheiro de software</p><hr><span>Áreas de atuação</span><ul><li>Backend e APIs</li><li>Frontend e produtos web</li></ul></article>",
+      "css": ".ds-profile-panel { border: 1px solid #d7e0e9; border-radius: 10px; padding: 1.5rem; background: #ffffff; color: #34445a; font: 400 0.92rem/1.65 Geist, Arial, sans-serif; } .ds-profile-panel strong { color: #172b46; font-size: 1.1rem; font-weight: 650; } .ds-profile-panel p { margin: 0; color: #5d6d81; font-size: 0.9rem; } .ds-profile-panel hr { height: 1px; margin: 1.5rem 0 1.25rem; border: 0; background: #d7e0e9; } .ds-profile-panel span { color: #5d6d81; font-size: 0.75rem; font-weight: 650; letter-spacing: 0.065em; text-transform: uppercase; } .ds-profile-panel ul { display: grid; gap: 0.65rem; margin: 0.9rem 0 0; padding: 0; list-style: none; }"
+    },
+    {
+      "name": "Project Row",
+      "kind": "custom",
+      "description": "Linha de projeto sem cartão ou sombra, separada por divisória.",
+      "html": "<article class=\"ds-project-row\"><a href=\"#\">clean-ts-api</a><p>TypeScript · 46 estrelas</p></article>",
+      "css": ".ds-project-row { display: flex; min-width: 0; flex-direction: column; justify-content: space-between; gap: 1rem; border-bottom: 1px solid #d7e0e9; padding: 1.35rem 0; color: #5d6d81; font: 400 0.78rem/1.6 Geist, Arial, sans-serif; } .ds-project-row a { color: #172b46; font-size: 1rem; font-weight: 650; text-decoration: none; overflow-wrap: anywhere; } .ds-project-row a:hover { color: #0b4688; text-decoration: underline; } .ds-project-row a:focus-visible { outline: 2px solid #4c9be0; outline-offset: 3px; } .ds-project-row p { margin: 0.45rem 0 0; }"
+    },
+    {
+      "name": "Contact Input",
+      "kind": "input",
+      "refersTo": "contact-input",
+      "description": "Campo de contato branco com label externo e estado de foco azul.",
+      "html": "<label class=\"ds-field\">E-mail<input type=\"email\" placeholder=\"voce@empresa.com\"></label>",
+      "css": ".ds-field { display: grid; gap: 0.35rem; color: #172b46; font: 600 0.86rem/1.4 Geist, Arial, sans-serif; } .ds-field input { width: 100%; min-height: 46px; border: 1px solid #bbc8d6; border-radius: 5px; padding: 0.7rem 0.8rem; background: #ffffff; color: #172b46; font: 400 0.94rem/1.5 Geist, Arial, sans-serif; transition: border-color 150ms ease, box-shadow 150ms ease; } .ds-field input::placeholder { color: #58687c; opacity: 1; } .ds-field input:focus { border-color: #4c9be0; outline: none; box-shadow: 0 0 0 3px rgb(76 155 224 / 15%); } .ds-field input:focus-visible { outline: 2px solid #4c9be0; outline-offset: 3px; }"
+    },
+    {
+      "name": "Primary Navigation",
+      "kind": "nav",
+      "description": "Links compactos sobre cabeçalho branco com divisor inferior.",
+      "html": "<nav class=\"ds-primary-nav\"><a href=\"#projetos\">Projetos</a><a href=\"#servicos\">Serviços</a><a href=\"#processo\">Processo</a></nav>",
+      "css": ".ds-primary-nav { display: flex; align-items: center; gap: 1.5rem; border-bottom: 1px solid #d7e0e9; padding: 1rem; background: #ffffff; } .ds-primary-nav a { color: #34445a; font: 500 0.875rem/1.4 Geist, Arial, sans-serif; text-decoration: none; transition: color 150ms ease; } .ds-primary-nav a:hover { color: #0b4688; } .ds-primary-nav a:focus-visible { outline: 2px solid #4c9be0; outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "O portfólio de engenharia claro e verificável",
+    "overview": "Koller Nexus apresenta serviços, trabalho público e contato numa linguagem profissional, direta e legível. A estrutura combina papel branco, planos azulados suaves, texto em azul-marinho e azul reservado para ações e referências interativas. Geist dá unidade às mensagens e Geist Mono destaca a numeração técnica do processo. A assinatura usa o recorte quadrado `public/koller-nexus-mark.png`, derivado da imagem fornecida; o social card usa `public/koller-nexus-og.jpg`, e o favicon e Apple icon usam o recorte quadrado. A imagem-fonte `public/koller-nexus.png` é JPEG de 1280×720 apesar da extensão `.png`; foi preservada e recebeu origem embutida.\n\nO ritmo é aberto, com conteúdo alinhado a um container central, títulos concisos e linhas finas separando listas. A navegação, os projetos, as contribuições, as competências e o processo são apresentados como informação concreta, sem efeitos decorativos. O bloco de contato fecha a página em alto contraste, usando a cor de tinta como fundo e um formulário branco.",
+    "keyCharacteristics": ["Superfícies claras com contraste tipográfico profundo.", "Azul usado para ações, links e pequenos marcadores.", "Listas e divisórias substituem cartões elevados.", "Conteúdo responsivo em português brasileiro."],
+    "rules": [
+      { "name": "The Blue-Action Rule", "body": "Reserve o azul de marca para ações, links e pequenos indicadores; mantenha áreas extensas nas superfícies claras ou na tinta marinho já usada no contato.", "section": "colors" },
+      { "name": "The Short-Measure Rule", "body": "Preserve a leitura em blocos curtos: títulos têm largura limitada em `ch`, e descrições não se estendem pela largura inteira do container.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Não introduza sombras para elevar listas ou blocos; use as superfícies e linhas existentes para separar conteúdo.", "section": "elevation" }
+    ],
+    "dos": ["Do mantenha superfícies brancas e azuladas, texto marinho e azul de ação nos usos já definidos.", "Do use linhas finas e listas abertas para organizar projetos, competências e etapas.", "Do mantenha a hierarquia Geist e use Geist Mono para numeração técnica.", "Do preserve os layouts em uma coluna em telas estreitas e o foco visível nos controles."],
+    "donts": ["Don't adicione gradientes, vidro, sombras decorativas ou ilustrações genéricas.", "Don't transforme cada item de lista em cartão elevado.", "Don't use o azul de ação como preenchimento de grandes áreas; o contato já possui seu tratamento escuro próprio.", "Don't sacrifique labels dos campos, foco visível ou a adaptação responsiva."]
+  }
+}

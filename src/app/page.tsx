@@ -3,196 +3,223 @@ import ContactForm from "@/components/ContactForm";
 import Projects from "@/components/Projects";
 import OpenSource from "@/components/OpenSource";
 
+const services = [
+  {
+    name: "Backend",
+    description:
+      "APIs e microsserviços em Go, arquitetura orientada a domínio, mensageria, dados e observabilidade.",
+  },
+  {
+    name: "Frontend",
+    description:
+      "Interfaces acessíveis e responsivas com React e Next.js, com atenção à experiência e à performance.",
+  },
+  {
+    name: "Mobile",
+    description:
+      "Aplicativos nativos ou multiplataforma, com telemetria e publicação automatizada.",
+  },
+  {
+    name: "DevOps",
+    description:
+      "CI/CD, Kubernetes, infraestrutura como código e segurança para operações previsíveis.",
+  },
+  {
+    name: "Engenharia de IA",
+    description:
+      "Integração de IA e LLMs em produtos, com guardrails, métricas e avaliação contínua.",
+  },
+];
+
+const processSteps = [
+  {
+    title: "Descoberta",
+    description:
+      "Entendimento do contexto, dos objetivos e das restrições do projeto.",
+  },
+  {
+    title: "Arquitetura",
+    description:
+      "Definição de domínios, contratos e observabilidade com simplicidade em mente.",
+  },
+  {
+    title: "Entrega iterativa",
+    description:
+      "Incrementos pequenos, testes e revisão contínua ao longo do desenvolvimento.",
+  },
+  {
+    title: "Operação",
+    description:
+      "Observabilidade, alertas e feedback para evoluir o produto com segurança.",
+  },
+];
+
+function ArrowIcon() {
+  return (
+    <svg
+      aria-hidden="true"
+      viewBox="0 0 20 20"
+      fill="none"
+      className="arrow-icon"
+    >
+      <path
+        d="M4.25 10h11.5m-5-5 5 5-5 5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export default function Home() {
   return (
     <>
-      {/* Anchor for top */}
       <div id="top" />
 
-      {/* Hero */}
-      <section className="section">
-        <div className="container grid gap-10 items-center md:grid-cols-2">
-          <div>
-            <p className="eyebrow mb-3">Koller Nexus</p>
-            <h1 className="text-4xl/tight sm:text-5xl/tight font-semibold tracking-tight">
-              Software que conecta ideias ao resultado.
+      <section className="hero-section" aria-labelledby="hero-heading">
+        <div className="container hero-layout">
+          <div className="hero-copy">
+            <p className="hero-name">Koller Nexus · William Koller</p>
+            <h1 id="hero-heading">
+              Engenharia de software para construir e evoluir produtos digitais.
             </h1>
-            <p className="mt-4 text-lg text-[var(--color-muted)]">
-              Engenharia de software minimalista e escalável. Entregamos{" "}
-              <strong>Backend</strong>, <strong>Frontend</strong>,{" "}
-              <strong>Mobile</strong>, <strong>DevOps</strong> e{" "}
-              <strong>IA</strong> com foco em qualidade, observabilidade e
-              time‑to‑value.
+            <p className="hero-description">
+              Desenvolvimento de ponta a ponta — de APIs e interfaces a mobile,
+              DevOps e inteligência artificial — com foco em qualidade e
+              operação.
             </p>
-            <div className="mt-8 flex items-center gap-3">
-              <a href="#contato" className="btn-primary">
-                Fale com a gente
+            <div className="hero-actions">
+              <a href="#contato" className="button-primary">
+                Conversar sobre um projeto <ArrowIcon />
               </a>
-              <a
-                href="#servicos"
-                className="inline-flex h-12 items-center rounded-full px-5 text-sm font-medium border"
-                style={{ borderColor: "var(--color-border)" }}
-              >
-                Ver serviços
+              <a href="#projetos" className="text-link">
+                Ver projetos públicos <ArrowIcon />
               </a>
             </div>
           </div>
-          <div className="flex justify-center md:justify-end">
-            <Image
-              src="/logo-kn.png"
-              alt="Logo Koller Nexus"
-              width={360}
-              height={360}
-              className="w-56 h-auto sm:w-72 md:w-80"
-              priority
-            />
-          </div>
+
+          <aside className="profile-panel" aria-label="Perfil profissional">
+            <div className="profile-heading">
+              <Image
+                src="/koller-nexus-mark.png"
+                alt=""
+                width={480}
+                height={480}
+                className="profile-logo"
+                priority
+              />
+              <div>
+                <p className="profile-name">William Koller</p>
+                <p className="profile-role">Engenheiro de software</p>
+              </div>
+            </div>
+            <div className="profile-divider" />
+            <p className="profile-label">Áreas de atuação</p>
+            <ul className="profile-specialties">
+              <li>Backend e APIs</li>
+              <li>Frontend e produtos web</li>
+              <li>Aplicativos mobile</li>
+              <li>DevOps e inteligência artificial</li>
+            </ul>
+            <a
+              href="https://github.com/williamkoller"
+              className="profile-link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+          </aside>
         </div>
       </section>
 
-      {/* Serviços */}
-      <section id="servicos" className="section bg-white">
-        <div className="container">
-          <div className="max-w-2xl">
-            <p className="eyebrow mb-3">Serviços</p>
-            <h2 className="text-3xl font-semibold tracking-tight">
-              Do conceito à produção — com a mesma excelência.
-            </h2>
-            <p className="mt-3 text-[var(--color-muted)]">
-              Damos peso igual a cada disciplina para entregar plataformas
-              coerentes, rápidas e fáceis de evoluir.
-            </p>
-          </div>
-
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="card">
-              <h3 className="text-xl font-semibold">Backend</h3>
-              <p className="mt-2 text-[var(--color-muted)]">
-                APIs e microsserviços em Go. Arquiteturas orientadas a domínio,
-                filas/eventos, bancos escaláveis e observabilidade de ponta a ponta.
-              </p>
-            </div>
-            <div className="card">
-              <h3 className="text-xl font-semibold">Frontend</h3>
-              <p className="mt-2 text-[var(--color-muted)]">
-                Interfaces acessíveis e responsivas com React/Next.js. Performance,
-                UX clara e design minimalista.
-              </p>
-            </div>
-            <div className="card">
-              <h3 className="text-xl font-semibold">Mobile</h3>
-              <p className="mt-2 text-[var(--color-muted)]">
-                Aplicativos nativos ou multiplataforma com experiência fluida,
-                telemetria e publicação automatizada.
-              </p>
-            </div>
-            <div className="card">
-              <h3 className="text-xl font-semibold">DevOps</h3>
-              <p className="mt-2 text-[var(--color-muted)]">
-                CI/CD, Kubernetes, infraestrutura como código e segurança. Entregas
-                previsíveis, rápidas e auditáveis.
-              </p>
-            </div>
-            <div className="card">
-              <h3 className="text-xl font-semibold">AI Engineer</h3>
-              <p className="mt-2 text-[var(--color-muted)]">
-                Integração de IA/LLMs em produtos com guardrails, métricas e
-                avaliação contínua. Do protótipo ao scale‑up.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Projetos */}
       <Projects />
 
-      {/* Open Source */}
+      <section id="servicos" className="section services-section">
+        <div className="container">
+          <div className="section-intro">
+            <h2>Competências para todo o ciclo do produto.</h2>
+            <p>
+              Da primeira decisão de arquitetura à operação, as disciplinas se
+              conectam para entregar software claro e sustentável.
+            </p>
+          </div>
+
+          <div className="services-list">
+            {services.map((service) => (
+              <article className="service-item" key={service.name}>
+                <h3>{service.name}</h3>
+                <p>{service.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <OpenSource />
 
-      {/* Processo */}
-      <section id="processo" className="section">
+      <section id="processo" className="section process-section">
         <div className="container">
-          <div className="max-w-2xl">
-            <p className="eyebrow mb-3">Como trabalhamos</p>
-            <h2 className="text-3xl font-semibold tracking-tight">
-              Processo claro. Resultados mensuráveis.
-            </h2>
+          <div className="section-intro">
+            <h2>Um processo direto, da descoberta à operação.</h2>
+            <p>
+              Alinhamento frequente e entregas iterativas mantêm as decisões
+              técnicas ligadas aos objetivos do produto.
+            </p>
           </div>
-          <ol className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            <li className="card">
-              <span className="text-sm font-semibold text-[var(--brand)]">01</span>
-              <h3 className="mt-2 font-semibold">Descoberta</h3>
-              <p className="mt-2 text-[var(--color-muted)]">
-                Entendimento do contexto, objetivos e restrições. Alinhamento de
-                métricas de sucesso.
-              </p>
-            </li>
-            <li className="card">
-              <span className="text-sm font-semibold text-[var(--brand)]">02</span>
-              <h3 className="mt-2 font-semibold">Arquitetura</h3>
-              <p className="mt-2 text-[var(--color-muted)]">
-                Design simples e escalável. Definição de domínios, contratos e
-                observabilidade desde o início.
-              </p>
-            </li>
-            <li className="card">
-              <span className="text-sm font-semibold text-[var(--brand)]">03</span>
-              <h3 className="mt-2 font-semibold">Entrega Iterativa</h3>
-              <p className="mt-2 text-[var(--color-muted)]">
-                Incrementos pequenos, testes e revisão contínua. Qualidade como
-                padrão.
-              </p>
-            </li>
-            <li className="card">
-              <span className="text-sm font-semibold text-[var(--brand)]">04</span>
-              <h3 className="mt-2 font-semibold">Operação</h3>
-              <p className="mt-2 text-[var(--color-muted)]">
-                Observabilidade, alertas e feedback do usuário para evoluir com
-                segurança.
-              </p>
-            </li>
+
+          <ol className="process-list">
+            {processSteps.map((step, index) => (
+              <li className="process-item" key={step.title}>
+                <span className="process-number">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <h3>{step.title}</h3>
+                <p>{step.description}</p>
+              </li>
+            ))}
           </ol>
         </div>
       </section>
 
-      {/* Sobre */}
-      <section id="sobre" className="section bg-white">
-        <div className="container grid gap-10 md:grid-cols-2">
-          <div>
-            <p className="eyebrow mb-3">Sobre</p>
-            <h2 className="text-3xl font-semibold tracking-tight">
-              Engenheiros apaixonados por simplicidade e valor de negócio.
-            </h2>
+      <section id="sobre" className="section about-section">
+        <div className="container about-layout">
+          <div className="about-heading">
+            <p className="about-name">William Koller</p>
+            <h2>Engenharia com clareza técnica e contexto de negócio.</h2>
+            <a
+              href="https://www.linkedin.com/in/williamkoller"
+              className="text-link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Perfil no LinkedIn <ArrowIcon />
+            </a>
           </div>
-          <div className="text-[var(--color-muted)]">
+          <div className="about-copy">
             <p>
-              Atuamos com princípios de Clean Architecture, testes automatizados e
-              observabilidade ponta a ponta. Acreditamos em interfaces claras,
-              backends robustos e operações previsíveis.
+              Atuação orientada por Clean Architecture, testes automatizados e
+              observabilidade ponta a ponta. Interfaces claras, backends
+              robustos e operações previsíveis.
             </p>
-            <p className="mt-3">
-              Nosso foco é acelerar o ciclo da ideia ao valor em produção — com
-              código idiomático, medição e segurança.
+            <p>
+              O foco está em aproximar a ideia do valor em produção com código
+              idiomático, medição e segurança.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Contato (visual) */}
-      <section id="contato" className="section">
-        <div className="container max-w-3xl">
-          <div className="max-w-2xl">
-            <p className="eyebrow mb-3">Contato</p>
-            <h2 className="text-3xl font-semibold tracking-tight">
-              Vamos conversar sobre o seu projeto?
-            </h2>
-            <p className="mt-3 text-[var(--color-muted)]">
-              Este formulário é apenas visual nesta etapa — o envio não está
-              habilitado.
+      <section id="contato" className="section contact-section">
+        <div className="container contact-layout">
+          <div className="contact-copy">
+            <h2>Vamos conversar sobre o que você está construindo?</h2>
+            <p>
+              Conte um pouco sobre o produto, o desafio técnico ou a oportunidade.
             </p>
           </div>
-
           <ContactForm />
         </div>
       </section>
