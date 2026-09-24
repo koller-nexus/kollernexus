@@ -30,10 +30,10 @@ export const metadata: Metadata = {
     siteName: "Koller Nexus",
     images: [
       {
-        url: "/logo-kn.png",
-        width: 1200,
-        height: 630,
-        alt: "Koller Nexus",
+        url: "/koller-nexus-og.jpg",
+        width: 1280,
+        height: 720,
+        alt: "Símbolo KN em azul sobre fundo branco",
       },
     ],
     locale: "pt_BR",
@@ -44,11 +44,11 @@ export const metadata: Metadata = {
     title: "Koller Nexus — Engenharia de Software",
     description:
       "Soluções modernas em Backend, Frontend, Mobile, DevOps e IA.",
-    images: ["/logo-kn.png"],
+    images: ["/koller-nexus-og.jpg"],
   },
   icons: {
-    icon: "/favicon.ico",
-    apple: "/logo-kn.png",
+    icon: "/koller-nexus-mark.png",
+    apple: "/koller-nexus-mark.png",
   },
 };
 
@@ -58,7 +58,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col bg-[var(--color-background)] text-[var(--color-foreground)]">
         <a
           href="#conteudo"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 btn-primary"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 button-primary"
         >
           Pular para o conteúdo
         </a>

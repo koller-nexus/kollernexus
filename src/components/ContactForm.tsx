@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { useState } from "react";
@@ -23,24 +22,26 @@ export default function ContactForm() {
       setName("");
       setEmail("");
       setMessage("");
-    } catch (err: any) {
+    } catch (err: unknown) {
       setStatus("error");
-      setError(err?.message ?? "Falha ao enviar. Tente novamente.");
+      setError(
+        err instanceof Error ? err.message : "Falha ao enviar. Tente novamente.",
+      );
     }
   }
 
   return (
-    <form className="mt-8 grid gap-4 card" aria-describedby="form-note" onSubmit={onSubmit}>
-      <div className="grid gap-1">
-        <label htmlFor="nome" className="text-sm font-medium">
+    <form className="contact-form" aria-describedby="form-note" onSubmit={onSubmit}>
+      <div className="form-field">
+        <label htmlFor="nome">
           Nome
         </label>
         <input
           id="nome"
           name="nome"
           placeholder="Seu nome"
-          className="h-11 rounded-md border px-3"
-          style={{ borderColor: "var(--color-border)" }}
+          autoComplete="name"
+          className="form-input"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
@@ -48,8 +49,8 @@ export default function ContactForm() {
           maxLength={100}
         />
       </div>
-      <div className="grid gap-1">
-        <label htmlFor="email" className="text-sm font-medium">
+      <div className="form-field">
+        <label htmlFor="email">
           E-mail
         </label>
         <input
@@ -57,16 +58,16 @@ export default function ContactForm() {
           name="email"
           type="email"
           placeholder="voce@empresa.com"
-          className="h-11 rounded-md border px-3"
-          style={{ borderColor: "var(--color-border)" }}
+          autoComplete="email"
+          className="form-input"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
           maxLength={254}
         />
       </div>
-      <div className="grid gap-1">
-        <label htmlFor="mensagem" className="text-sm font-medium">
+      <div className="form-field">
+        <label htmlFor="mensagem">
           Mensagem
         </label>
         <textarea
@@ -74,8 +75,7 @@ export default function ContactForm() {
           name="mensagem"
           placeholder="Conte um pouco sobre o desafio"
           rows={5}
-          className="rounded-md border px-3 py-2"
-          style={{ borderColor: "var(--color-border)" }}
+          className="form-textarea"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           required
@@ -83,26 +83,25 @@ export default function ContactForm() {
           maxLength={5000}
         />
       </div>
-      <div className="flex items-center justify-between">
-        <p id="form-note" className="text-sm text-[var(--color-muted)]">
+      <div className="contact-form-footer">
+        <p id="form-note" className="contact-form-note">
           Seus dados serão usados apenas para retorno de contato.
         </p>
-        <button className="btn-primary" disabled={status === "loading"}>
+        <button className="button-primary" disabled={status === "loading"}>
           {status === "loading" ? "Enviando..." : "Enviar"}
         </button>
       </div>
 
       {status === "success" && (
-        <p role="status" className="text-sm text-green-700">
+        <p role="status" className="form-status form-status--success">
           Mensagem enviada com sucesso.
         </p>
       )}
       {status === "error" && (
-        <p role="alert" className="text-sm text-red-700">
+        <p role="alert" className="form-status form-status--error">
           {error}
         </p>
       )}
     </form>
   );
 }
-
