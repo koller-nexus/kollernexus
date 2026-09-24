@@ -47,8 +47,8 @@ export const metadata: Metadata = {
     images: ["/koller-nexus-og.jpg"],
   },
   icons: {
-    icon: "/koller-nexus-mark.png",
-    apple: "/koller-nexus-mark.png",
+    icon: "/koller-nexus-icon.png",
+    apple: "/koller-nexus-icon.png",
   },
 };
 
