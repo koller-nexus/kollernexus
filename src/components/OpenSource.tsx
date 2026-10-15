@@ -1,3 +1,5 @@
+import StarIcon from "@/icons/Star";
+
 type PRLink = { url: string; title: string };
 type Contribution = {
   owner: string;
@@ -6,7 +8,6 @@ type Contribution = {
   description: string;
   language: string;
   repoUrl: string;
-  starsFallback: number;
   prs?: PRLink[];
 };
 
@@ -19,7 +20,6 @@ const CONTRIBUTIONS: Contribution[] = [
       "CLI proxy que reduz consumo de tokens em 60–90% em comandos comuns de dev. Binário único em Rust.",
     language: "Rust",
     repoUrl: "https://github.com/rtk-ai/rtk",
-    starsFallback: 80000,
     prs: [
       {
         url: "https://github.com/rtk-ai/rtk/pull/1478",
@@ -49,72 +49,69 @@ async function fetchStars(owner: string, repo: string): Promise<number | null> {
   }
 }
 
-function StarIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      aria-hidden="true"
-      className="h-4 w-4"
-      style={{ color: "var(--brand)" }}
-    >
-      <path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.402 8.168L12 18.896l-7.336 3.869 1.402-8.168L.132 9.21l8.2-1.192L12 .587z" />
-    </svg>
-  );
-}
-
 export default async function OpenSource() {
   // For now we only feature the first item, but the structure supports more.
   const featured = CONTRIBUTIONS[0];
-  const liveStars =
-    (await fetchStars(featured.owner, featured.repo)) ??
-    featured.starsFallback;
+  const liveStars = await fetchStars(featured.owner, featured.repo);
 
   return (
-    <section id="open-source" className="section open-source-section">
-      <div className="container">
-        <div className="section-intro">
-          <h2>Contribuições em projetos de código aberto.</h2>
+    <section id="open-source" className="band" aria-labelledby="oss-heading">
+      <div className="frame">
+        <div className="section-head">
+          <h2 id="oss-heading">Também contribuo com código aberto.</h2>
           <p>
-            Participação pública em ferramentas utilizadas pela comunidade de
-            desenvolvimento.
+            Pull requests meus em ferramentas que a comunidade de
+            desenvolvimento usa todos os dias.
           </p>
         </div>
 
-        <article className="contribution-row">
-          <div className="contribution-copy">
-            <p className="contribution-label">Projeto em destaque</p>
+        <div className="oss">
+          <div className="oss-project">
             <h3>
               <a href={featured.repoUrl} target="_blank" rel="noreferrer">
                 {featured.name}
               </a>
             </h3>
-            <p className="contribution-description">
-              {featured.description}
-            </p>
-            {featured.prs?.length ? (
-              <div className="contribution-prs">
-                <h4>Pull requests de William</h4>
-                <ul>
-                  {featured.prs.map((pr) => (
-                    <li key={pr.url}>
+            <p>{featured.description}</p>
+            <div className="oss-meta mono">
+              {liveStars !== null && (
+                <span>
+                  <StarIcon />
+                  {liveStars.toLocaleString("pt-BR")} estrelas
+                </span>
+              )}
+              <span>{featured.language}</span>
+            </div>
+          </div>
+
+          {featured.prs?.length ? (
+            <table className="schedule revisions">
+              <caption className="sr-only">
+                Pull requests de William em {featured.name}
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col" className="col-rev caps">PR</th>
+                  <th scope="col" className="caps">Alteração</th>
+                </tr>
+              </thead>
+              <tbody>
+                {featured.prs.map((pr) => (
+                  <tr key={pr.url}>
+                    <td className="col-rev mono">
+                      #{pr.url.split("/").pop()}
+                    </td>
+                    <td>
                       <a href={pr.url} target="_blank" rel="noreferrer">
                         {pr.title}
                       </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-          </div>
-          <div className="contribution-meta">
-            <span>
-              <StarIcon /> {liveStars.toLocaleString("pt-BR")} estrelas
-            </span>
-            <span>{featured.language}</span>
-          </div>
-        </article>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          ) : null}
+        </div>
       </div>
     </section>
   );
