@@ -7,7 +7,7 @@ export default function Header() {
       <div className="frame header-inner">
         <Link href="#top" className="brand-link" aria-label="Koller Nexus, início">
           <Image
-            src="/koller-nexus-mark.png"
+            src="/koller-nexus-kn.png"
             alt=""
             width={480}
             height={480}

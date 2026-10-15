@@ -47,10 +47,6 @@ export const metadata: Metadata = {
       "Soluções modernas em Backend, Frontend, Mobile, DevOps e IA.",
     images: ["/koller-nexus-og.jpg"],
   },
-  icons: {
-    icon: "/koller-nexus-icon.png",
-    apple: "/koller-nexus-icon.png",
-  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
