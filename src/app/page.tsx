@@ -2,38 +2,44 @@ import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import Projects from "@/components/Projects";
 import OpenSource from "@/components/OpenSource";
+import ArrowIcon from "@/icons/Arrow";
+import GitHubIcon from "@/icons/GitHub";
 import LinkedInIcon from "@/icons/LinkedIn";
 import WhatsAppIcon from "@/icons/WhatsApp";
 
 const whatsappMessage =
   "Olá, William. Vi o site da Koller Nexus e gostaria de conversar sobre um projeto.";
 const whatsappHref = `https://wa.me/5541988682343?text=${encodeURIComponent(whatsappMessage)}`;
+const linkedinHref = "https://www.linkedin.com/in/williamkoller";
+const githubHref = "https://github.com/williamkoller";
+
+const disciplines = ["Backend", "Frontend", "Mobile", "DevOps", "IA"];
 
 const services = [
   {
     name: "Backend",
     description:
-      "APIs e microsserviços em Go, arquitetura orientada a domínio, mensageria, dados e observabilidade.",
+      "Desenho APIs e microsserviços em Go, com arquitetura orientada a domínio, mensageria, dados e observabilidade.",
   },
   {
     name: "Frontend",
     description:
-      "Interfaces acessíveis e responsivas com React e Next.js, com atenção à experiência e à performance.",
+      "Construo interfaces acessíveis e responsivas com React e Next.js, cuidando da experiência e da performance.",
   },
   {
     name: "Mobile",
     description:
-      "Aplicativos nativos ou multiplataforma, com telemetria e publicação automatizada.",
+      "Desenvolvo aplicativos nativos ou multiplataforma, com telemetria e publicação automatizada.",
   },
   {
     name: "DevOps",
     description:
-      "CI/CD, Kubernetes, infraestrutura como código e segurança para operações previsíveis.",
+      "Monto CI/CD, Kubernetes, infraestrutura como código e segurança para a operação ser previsível.",
   },
   {
     name: "Engenharia de IA",
     description:
-      "Integração de IA e LLMs em produtos, com guardrails, métricas e avaliação contínua.",
+      "Integro IA e LLMs ao produto com guardrails, métricas e avaliação contínua.",
   },
 ];
 
@@ -41,121 +47,105 @@ const processSteps = [
   {
     title: "Descoberta",
     description:
-      "Entendimento do contexto, dos objetivos e das restrições do projeto.",
+      "Começo entendendo o contexto, os objetivos e as restrições do seu projeto.",
   },
   {
     title: "Arquitetura",
     description:
-      "Definição de domínios, contratos e observabilidade com simplicidade em mente.",
+      "Definimos domínios, contratos e observabilidade, sempre pelo caminho mais simples.",
   },
   {
     title: "Entrega iterativa",
     description:
-      "Incrementos pequenos, testes e revisão contínua ao longo do desenvolvimento.",
+      "Entrego em incrementos pequenos, com testes e revisão contínua do início ao fim.",
   },
   {
     title: "Operação",
     description:
-      "Observabilidade, alertas e feedback para evoluir o produto com segurança.",
+      "Com alertas e feedback em produção, o produto evolui com segurança.",
   },
 ];
-
-function ArrowIcon() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 20 20"
-      fill="none"
-      className="arrow-icon"
-    >
-      <path
-        d="M4.25 10h11.5m-5-5 5 5-5 5"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
 
 export default function Home() {
   return (
     <>
       <div id="top" />
 
-      <section className="hero-section" aria-labelledby="hero-heading">
-        <div className="container hero-layout">
-          <div className="hero-copy">
-            <p className="hero-name">Koller Nexus · William Koller</p>
+      <section className="hero" aria-labelledby="hero-heading">
+        <div className="frame">
+          <div>
             <h1 id="hero-heading">
-              Engenharia de software para construir e evoluir produtos digitais.
+              Construo software do primeiro esboço à produção.
             </h1>
-            <p className="hero-description">
-              Desenvolvimento de ponta a ponta — de APIs e interfaces a mobile,
-              DevOps e inteligência artificial — com foco em qualidade e
-              operação.
+            <p className="hero-lead">
+              Sou William Koller, engenheiro de software. Trabalho de ponta a
+              ponta, de APIs e interfaces a apps, infraestrutura e IA, e
+              continuo por perto depois do deploy.
             </p>
+
+            <ol className="dimension caps" aria-label="Disciplinas que cubro">
+              {disciplines.map((name, i) => (
+                <li key={name} style={{ "--i": i } as React.CSSProperties}>
+                  {name}
+                  {i === disciplines.length - 1 && (
+                    <span className="tick-end" aria-hidden="true" />
+                  )}
+                </li>
+              ))}
+            </ol>
+
             <div className="hero-actions">
               <a href="#contato" className="button-primary">
-                Conversar sobre um projeto <ArrowIcon />
+                Conversar sobre seu projeto <ArrowIcon />
               </a>
               <a href="#projetos" className="text-link">
-                Ver projetos públicos <ArrowIcon />
+                Ver o que já publiquei <ArrowIcon />
               </a>
             </div>
           </div>
 
-          <aside className="profile-panel" aria-label="Perfil profissional">
-            <div className="profile-heading">
-              <Image
-                src="/koller-nexus-mark.png"
-                alt=""
-                width={480}
-                height={480}
-                className="profile-logo"
-                priority
-              />
-              <div>
-                <p className="profile-name">William Koller</p>
-                <p className="profile-role">Engenheiro de software</p>
+          <aside className="title-block" aria-label="Sobre o responsável">
+            <Image
+              src="/william-koller-retrato.jpg"
+              alt="William Koller sorrindo, de óculos redondos e jaqueta azul, ao ar livre"
+              width={800}
+              height={800}
+              className="title-block-photo"
+              sizes="(width <= 960px) 520px, 440px"
+              priority
+            />
+            <div className="title-block-row">
+              <div className="title-block-cell">
+                <p className="caps">Responsável técnico</p>
+                <p className="title-block-name">William Koller</p>
+                <p className="title-block-value">Engenheiro de software</p>
               </div>
             </div>
-            <div className="profile-divider" />
-            <p className="profile-label">Áreas de atuação</p>
-            <ul className="profile-specialties">
-              <li>Backend e APIs</li>
-              <li>Frontend e produtos web</li>
-              <li>Aplicativos mobile</li>
-              <li>DevOps e inteligência artificial</li>
-            </ul>
-            <div className="profile-links">
-              <a
-                href="https://github.com/williamkoller"
-                className="profile-link"
-                target="_blank"
-                rel="noreferrer"
-              >
-                GitHub
-              </a>
-              <a
-                href="https://www.linkedin.com/in/williamkoller"
-                className="profile-icon-link"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="LinkedIn"
-              >
-                <LinkedInIcon aria-hidden="true" />
-              </a>
-              <a
-                href={whatsappHref}
-                className="profile-icon-link profile-icon-link-whatsapp"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="WhatsApp"
-              >
-                <WhatsAppIcon />
-              </a>
+            <div className="title-block-row" style={{ "--cols": 2 } as React.CSSProperties}>
+              <div className="title-block-cell">
+                <p className="caps">Cidade</p>
+                <p className="title-block-value">Curitiba, PR</p>
+              </div>
+              <div className="title-block-cell">
+                <p className="caps">Atendimento</p>
+                <p className="title-block-value">Remoto</p>
+              </div>
+            </div>
+            <div className="title-block-row">
+              <div className="title-block-cell">
+                <p className="caps">Onde me encontrar</p>
+                <div className="title-block-links">
+                  <a href={githubHref} target="_blank" rel="noreferrer">
+                    <GitHubIcon /> GitHub
+                  </a>
+                  <a href={linkedinHref} target="_blank" rel="noreferrer">
+                    <LinkedInIcon aria-hidden="true" /> LinkedIn
+                  </a>
+                  <a href={whatsappHref} target="_blank" rel="noreferrer">
+                    <WhatsAppIcon /> WhatsApp
+                  </a>
+                </div>
+              </div>
             </div>
           </aside>
         </div>
@@ -163,44 +153,44 @@ export default function Home() {
 
       <Projects />
 
-      <section id="servicos" className="section services-section">
-        <div className="container">
-          <div className="section-intro">
-            <h2>Competências para todo o ciclo do produto.</h2>
+      <section id="servicos" className="band" aria-labelledby="servicos-heading">
+        <div className="frame">
+          <div className="section-head">
+            <h2 id="servicos-heading">O que eu faço.</h2>
             <p>
-              Da primeira decisão de arquitetura à operação, as disciplinas se
-              conectam para entregar software claro e sustentável.
+              Cinco disciplinas que conecto num mesmo projeto, da primeira
+              decisão de arquitetura à operação.
             </p>
           </div>
 
-          <div className="services-list">
+          <dl className="services-list">
             {services.map((service) => (
-              <article className="service-item" key={service.name}>
-                <h3>{service.name}</h3>
-                <p>{service.description}</p>
-              </article>
+              <div className="service-item" key={service.name}>
+                <dt>{service.name}</dt>
+                <dd>{service.description}</dd>
+              </div>
             ))}
-          </div>
+          </dl>
         </div>
       </section>
 
       <OpenSource />
 
-      <section id="processo" className="section process-section">
-        <div className="container">
-          <div className="section-intro">
-            <h2>Um processo direto, da descoberta à operação.</h2>
+      <section id="processo" className="band" aria-labelledby="processo-heading">
+        <div className="frame">
+          <div className="section-head">
+            <h2 id="processo-heading">Como a gente trabalha junto.</h2>
             <p>
-              Alinhamento frequente e entregas iterativas mantêm as decisões
-              técnicas ligadas aos objetivos do produto.
+              Conversas frequentes e entregas curtas mantêm cada decisão técnica
+              ligada ao que o produto precisa.
             </p>
           </div>
 
           <ol className="process-list">
             {processSteps.map((step, index) => (
-              <li className="process-item" key={step.title}>
-                <span className="process-number">
-                  {String(index + 1).padStart(2, "0")}
+              <li className="process-step" key={step.title}>
+                <span className="detail-marker mono" aria-hidden="true">
+                  {index + 1}
                 </span>
                 <h3>{step.title}</h3>
                 <p>{step.description}</p>
@@ -210,41 +200,51 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="sobre" className="section about-section">
-        <div className="container about-layout">
-          <div className="about-heading">
-            <p className="about-name">William Koller</p>
-            <h2>Engenharia com clareza técnica e contexto de negócio.</h2>
+      <section id="sobre" className="band" aria-labelledby="sobre-heading">
+        <div className="frame about">
+          <h2 id="sobre-heading">
+            Gosto de software claro, testado e fácil de operar.
+          </h2>
+          <div className="about-copy">
+            <p>
+              Trabalho guiado por Clean Architecture, testes automatizados e
+              observabilidade de ponta a ponta. Prefiro interfaces claras,
+              backends robustos e operações previsíveis.
+            </p>
+            <p>
+              Meu foco é encurtar a distância entre a ideia e o valor em
+              produção, com código idiomático, medição e segurança.
+            </p>
             <a
-              href="https://www.linkedin.com/in/williamkoller"
+              href={linkedinHref}
               className="text-link"
               target="_blank"
               rel="noreferrer"
             >
-              Perfil no LinkedIn <ArrowIcon />
+              Meu perfil no LinkedIn <ArrowIcon />
             </a>
-          </div>
-          <div className="about-copy">
-            <p>
-              Atuação orientada por Clean Architecture, testes automatizados e
-              observabilidade ponta a ponta. Interfaces claras, backends
-              robustos e operações previsíveis.
-            </p>
-            <p>
-              O foco está em aproximar a ideia do valor em produção com código
-              idiomático, medição e segurança.
-            </p>
           </div>
         </div>
       </section>
 
-      <section id="contato" className="section contact-section">
-        <div className="container contact-layout">
+      <section id="contato" className="band" aria-labelledby="contato-heading">
+        <div className="frame contact">
           <div className="contact-copy">
-            <h2>Vamos conversar sobre o que você está construindo?</h2>
+            <h2 id="contato-heading">
+              Me conta o que você está construindo.
+            </h2>
             <p>
-              Conte um pouco sobre o produto, o desafio técnico ou a oportunidade.
+              Pode ser um produto novo, um sistema que precisa de ajuda ou só
+              uma ideia. Quem lê e responde sou eu.
             </p>
+            <div className="contact-alt">
+              <a href={whatsappHref} target="_blank" rel="noreferrer">
+                <WhatsAppIcon /> Prefiro o WhatsApp
+              </a>
+              <a href={linkedinHref} target="_blank" rel="noreferrer">
+                <LinkedInIcon aria-hidden="true" /> Falar pelo LinkedIn
+              </a>
+            </div>
           </div>
           <ContactForm />
         </div>

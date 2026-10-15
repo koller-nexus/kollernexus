@@ -28,7 +28,8 @@ A landing page em português brasileiro apresenta serviços, projetos e contribu
 - Os projetos públicos são carregados do GitHub, com uma lista local de fallback.
 - A página inclui um formulário que envia mensagens por uma rota de API; o envio depende de configuração de credenciais do Resend.
 - A implementação existente usa Next.js App Router, React, TypeScript e Tailwind CSS.
-- O público, o escopo geográfico de atendimento, os modelos comerciais e o diferencial específico ainda não foram definidos.
+- William fica em Curitiba, PR, e atende remotamente (confirmado pelo responsável).
+- O público, os modelos comerciais e o diferencial específico ainda não foram definidos.
 
 ## Brand Commitments
 

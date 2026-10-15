@@ -28,6 +28,22 @@ This project uses Next.js 16, React 19, and Tailwind CSS 4. Prefer TypeScript an
 - Preserve the existing visual language and component patterns when changing UI. Make interfaces accessible and responsive, including semantic HTML, keyboard behavior, visible focus, and reduced-motion preferences where relevant.
 - For substantial UI design or review work, use the [Impeccable skill](.agents/skills/impeccable/SKILL.md) and follow its project-context and craft guidance. Do not invoke its UI workflow for unrelated backend changes.
 
+### UI/UX and motion skills
+
+Pick the narrowest skill that fits the task; skip them for non-UI work.
+
+- [Emil Design Eng](.agents/skills/emil-design-eng/SKILL.md): polish and the small interaction details of components.
+- [Apple Design](.agents/skills/apple-design/SKILL.md): gestures, springs, drag/swipe/sheet interactions, interruptible transitions, materials and depth, typography, and design foundations.
+- [Animate](.agents/skills/animate/SKILL.md): building new motion — decide whether to animate at all, then purpose, properties, easing, duration, interruption, and exit.
+- [Review Animations](.agents/skills/review-animations/SKILL.md): critiquing existing motion code.
+- [Animation Performance](.agents/skills/animation-performance/SKILL.md): janky or dropped-frame animations; composite-only properties, CSS vs WAAPI vs JS, `will-change`.
+- [Animation Vocabulary](.agents/skills/animation-vocabulary/SKILL.md): naming a described motion effect.
+- [Break UI](.agents/skills/break-ui/SKILL.md): stress-testing a component with worst-case data (long text, empty states, non-Latin, extreme numbers).
+- [Ask Sonner](.agents/skills/ask-sonner/SKILL.md): toast notifications with Sonner.
+- [Pick UI Library](.agents/skills/pick-ui-library/SKILL.md) and [Prototype](.agents/skills/prototype/SKILL.md): only when explicitly requested. Any new dependency still needs a clear reason (see bundle guidance above).
+
+All motion must respect `prefers-reduced-motion`.
+
 ### TypeSafe
 
 - When a feature needs programmable judgments (routing, ranking, extraction, verification, or replacing a prompt-and-parse step), use the [TypeSafe skill](.agents/skills/typesafe-ai/SKILL.md) and follow its live docs before writing an integration.

@@ -1,96 +1,445 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-24T00:00:00-03:00",
+  "generatedAt": "2026-10-15T00:00:00-03:00",
   "title": "Design System: Koller Nexus",
   "extensions": {
     "colorMeta": {
-      "page": { "role": "neutral", "displayName": "Branco de página", "canonical": "#ffffff", "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(35% 0 0)", "oklch(45% 0 0)", "oklch(55% 0 0)", "oklch(65% 0 0)", "oklch(80% 0 0)", "oklch(95% 0 0)"] },
-      "surface": { "role": "neutral", "displayName": "Azul névoa", "canonical": "#f3f7fb", "tonalRamp": ["oklch(15% 0.01 250)", "oklch(25% 0.01 250)", "oklch(35% 0.01 250)", "oklch(45% 0.01 250)", "oklch(55% 0.01 250)", "oklch(65% 0.01 250)", "oklch(80% 0.01 250)", "oklch(95% 0.01 250)"] },
-      "surface-strong": { "role": "neutral", "displayName": "Azul névoa profundo", "canonical": "#eaf1f8", "tonalRamp": ["oklch(15% 0.015 250)", "oklch(25% 0.015 250)", "oklch(35% 0.015 250)", "oklch(45% 0.015 250)", "oklch(55% 0.015 250)", "oklch(65% 0.015 250)", "oklch(80% 0.015 250)", "oklch(95% 0.015 250)"] },
-      "ink": { "role": "neutral", "displayName": "Tinta marinho", "canonical": "#172b46", "tonalRamp": ["oklch(15% 0.035 250)", "oklch(25% 0.035 250)", "oklch(35% 0.035 250)", "oklch(45% 0.035 250)", "oklch(55% 0.035 250)", "oklch(65% 0.035 250)", "oklch(80% 0.035 250)", "oklch(95% 0.035 250)"] },
-      "body": { "role": "neutral", "displayName": "Texto ardósia", "canonical": "#34445a", "tonalRamp": ["oklch(15% 0.025 250)", "oklch(25% 0.025 250)", "oklch(35% 0.025 250)", "oklch(45% 0.025 250)", "oklch(55% 0.025 250)", "oklch(65% 0.025 250)", "oklch(80% 0.025 250)", "oklch(95% 0.025 250)"] },
-      "muted": { "role": "neutral", "displayName": "Texto secundário", "canonical": "#5d6d81", "tonalRamp": ["oklch(15% 0.02 250)", "oklch(25% 0.02 250)", "oklch(35% 0.02 250)", "oklch(45% 0.02 250)", "oklch(55% 0.02 250)", "oklch(65% 0.02 250)", "oklch(80% 0.02 250)", "oklch(95% 0.02 250)"] },
-      "brand": { "role": "primary", "displayName": "Azul de ação", "canonical": "#0b4688", "tonalRamp": ["oklch(15% 0.08 245)", "oklch(25% 0.08 245)", "oklch(35% 0.08 245)", "oklch(45% 0.08 245)", "oklch(55% 0.08 245)", "oklch(65% 0.08 245)", "oklch(80% 0.08 245)", "oklch(95% 0.08 245)"] },
-      "brand-hover": { "role": "primary", "displayName": "Azul de ação escuro", "canonical": "#073a74", "tonalRamp": ["oklch(15% 0.075 245)", "oklch(25% 0.075 245)", "oklch(35% 0.075 245)", "oklch(45% 0.075 245)", "oklch(55% 0.075 245)", "oklch(65% 0.075 245)", "oklch(80% 0.075 245)", "oklch(95% 0.075 245)"] },
-      "line": { "role": "neutral", "displayName": "Linha azul-cinza", "canonical": "#d7e0e9", "tonalRamp": ["oklch(15% 0.01 250)", "oklch(25% 0.01 250)", "oklch(35% 0.01 250)", "oklch(45% 0.01 250)", "oklch(55% 0.01 250)", "oklch(65% 0.01 250)", "oklch(80% 0.01 250)", "oklch(95% 0.01 250)"] },
-      "focus": { "role": "primary", "displayName": "Azul de foco", "canonical": "#4c9be0", "tonalRamp": ["oklch(15% 0.09 245)", "oklch(25% 0.09 245)", "oklch(35% 0.09 245)", "oklch(45% 0.09 245)", "oklch(55% 0.09 245)", "oklch(65% 0.09 245)", "oklch(80% 0.09 245)", "oklch(95% 0.09 245)"] },
-      "field-border": { "role": "neutral", "displayName": "Borda de campo", "canonical": "#bbc8d6", "tonalRamp": ["oklch(15% 0.015 250)", "oklch(25% 0.015 250)", "oklch(35% 0.015 250)", "oklch(45% 0.015 250)", "oklch(55% 0.015 250)", "oklch(65% 0.015 250)", "oklch(80% 0.015 250)", "oklch(95% 0.015 250)"] },
-      "success": { "role": "tertiary", "displayName": "Verde de sucesso", "canonical": "#176143", "tonalRamp": ["oklch(15% 0.07 160)", "oklch(25% 0.07 160)", "oklch(35% 0.07 160)", "oklch(45% 0.07 160)", "oklch(55% 0.07 160)", "oklch(65% 0.07 160)", "oklch(80% 0.07 160)", "oklch(95% 0.07 160)"] },
-      "error": { "role": "tertiary", "displayName": "Vermelho de erro", "canonical": "#a53131", "tonalRamp": ["oklch(15% 0.1 25)", "oklch(25% 0.1 25)", "oklch(35% 0.1 25)", "oklch(45% 0.1 25)", "oklch(55% 0.1 25)", "oklch(65% 0.1 25)", "oklch(80% 0.1 25)", "oklch(95% 0.1 25)"] }
+      "paper": {
+        "role": "neutral",
+        "displayName": "Papel",
+        "canonical": "#f6f7f4",
+        "tonalRamp": [
+          "oklch(15% 0.004 122)",
+          "oklch(25% 0.004 122)",
+          "oklch(35% 0.004 122)",
+          "oklch(45% 0.004 122)",
+          "oklch(55% 0.004 122)",
+          "oklch(65% 0.004 122)",
+          "oklch(80% 0.004 122)",
+          "oklch(95% 0.004 122)"
+        ]
+      },
+      "sheet": {
+        "role": "neutral",
+        "displayName": "Folha",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(25% 0 0)",
+          "oklch(35% 0 0)",
+          "oklch(45% 0 0)",
+          "oklch(55% 0 0)",
+          "oklch(65% 0 0)",
+          "oklch(80% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Tinta Grafite",
+        "canonical": "#1a1f27",
+        "tonalRamp": [
+          "oklch(15% 0.017 260)",
+          "oklch(25% 0.017 260)",
+          "oklch(35% 0.017 260)",
+          "oklch(45% 0.017 260)",
+          "oklch(55% 0.017 260)",
+          "oklch(65% 0.017 260)",
+          "oklch(80% 0.017 260)",
+          "oklch(95% 0.017 260)"
+        ]
+      },
+      "body": {
+        "role": "neutral",
+        "displayName": "Texto Corrido",
+        "canonical": "#3b434e",
+        "tonalRamp": [
+          "oklch(15% 0.022 256)",
+          "oklch(25% 0.022 256)",
+          "oklch(35% 0.022 256)",
+          "oklch(45% 0.022 256)",
+          "oklch(55% 0.022 256)",
+          "oklch(65% 0.022 256)",
+          "oklch(80% 0.022 256)",
+          "oklch(95% 0.022 256)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Lápis",
+        "canonical": "#5c6470",
+        "tonalRamp": [
+          "oklch(15% 0.022 258)",
+          "oklch(25% 0.022 258)",
+          "oklch(35% 0.022 258)",
+          "oklch(45% 0.022 258)",
+          "oklch(55% 0.022 258)",
+          "oklch(65% 0.022 258)",
+          "oklch(80% 0.022 258)",
+          "oklch(95% 0.022 258)"
+        ]
+      },
+      "brand": {
+        "role": "primary",
+        "displayName": "Azul Koller",
+        "canonical": "#0b4688",
+        "tonalRamp": [
+          "oklch(15% 0.124 255)",
+          "oklch(25% 0.124 255)",
+          "oklch(35% 0.124 255)",
+          "oklch(45% 0.124 255)",
+          "oklch(55% 0.124 255)",
+          "oklch(65% 0.124 255)",
+          "oklch(80% 0.124 255)",
+          "oklch(95% 0.124 255)"
+        ]
+      },
+      "brand-hover": {
+        "role": "primary",
+        "displayName": "Azul Koller Fundo",
+        "canonical": "#073a74",
+        "tonalRamp": [
+          "oklch(15% 0.112 256)",
+          "oklch(25% 0.112 256)",
+          "oklch(35% 0.112 256)",
+          "oklch(45% 0.112 256)",
+          "oklch(55% 0.112 256)",
+          "oklch(65% 0.112 256)",
+          "oklch(80% 0.112 256)",
+          "oklch(95% 0.112 256)"
+        ]
+      },
+      "diazo": {
+        "role": "secondary",
+        "displayName": "Diazo",
+        "canonical": "#a9bfdb",
+        "tonalRamp": [
+          "oklch(15% 0.047 255)",
+          "oklch(25% 0.047 255)",
+          "oklch(35% 0.047 255)",
+          "oklch(45% 0.047 255)",
+          "oklch(55% 0.047 255)",
+          "oklch(65% 0.047 255)",
+          "oklch(80% 0.047 255)",
+          "oklch(95% 0.047 255)"
+        ]
+      },
+      "diazo-strong": {
+        "role": "secondary",
+        "displayName": "Diazo Forte",
+        "canonical": "#6f8fb8",
+        "tonalRamp": [
+          "oklch(15% 0.072 255)",
+          "oklch(25% 0.072 255)",
+          "oklch(35% 0.072 255)",
+          "oklch(45% 0.072 255)",
+          "oklch(55% 0.072 255)",
+          "oklch(65% 0.072 255)",
+          "oklch(80% 0.072 255)",
+          "oklch(95% 0.072 255)"
+        ]
+      },
+      "diazo-wash": {
+        "role": "secondary",
+        "displayName": "Lavagem Diazo",
+        "canonical": "#edf2f8",
+        "tonalRamp": [
+          "oklch(15% 0.010 253)",
+          "oklch(25% 0.010 253)",
+          "oklch(35% 0.010 253)",
+          "oklch(45% 0.010 253)",
+          "oklch(55% 0.010 253)",
+          "oklch(65% 0.010 253)",
+          "oklch(80% 0.010 253)",
+          "oklch(95% 0.010 253)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Régua Fina",
+        "canonical": "#d9dee3",
+        "tonalRamp": [
+          "oklch(15% 0.009 248)",
+          "oklch(25% 0.009 248)",
+          "oklch(35% 0.009 248)",
+          "oklch(45% 0.009 248)",
+          "oklch(55% 0.009 248)",
+          "oklch(65% 0.009 248)",
+          "oklch(80% 0.009 248)",
+          "oklch(95% 0.009 248)"
+        ]
+      },
+      "field-rule": {
+        "role": "neutral",
+        "displayName": "Régua de Campo",
+        "canonical": "#7d8fa6",
+        "tonalRamp": [
+          "oklch(15% 0.040 255)",
+          "oklch(25% 0.040 255)",
+          "oklch(35% 0.040 255)",
+          "oklch(45% 0.040 255)",
+          "oklch(55% 0.040 255)",
+          "oklch(65% 0.040 255)",
+          "oklch(80% 0.040 255)",
+          "oklch(95% 0.040 255)"
+        ]
+      },
+      "focus": {
+        "role": "neutral",
+        "displayName": "Foco",
+        "canonical": "#2f7fd1",
+        "tonalRamp": [
+          "oklch(15% 0.147 252)",
+          "oklch(25% 0.147 252)",
+          "oklch(35% 0.147 252)",
+          "oklch(45% 0.147 252)",
+          "oklch(55% 0.147 252)",
+          "oklch(65% 0.147 252)",
+          "oklch(80% 0.147 252)",
+          "oklch(95% 0.147 252)"
+        ]
+      },
+      "success": {
+        "role": "neutral",
+        "displayName": "Sucesso",
+        "canonical": "#176143",
+        "tonalRamp": [
+          "oklch(15% 0.087 162)",
+          "oklch(25% 0.087 162)",
+          "oklch(35% 0.087 162)",
+          "oklch(45% 0.087 162)",
+          "oklch(55% 0.087 162)",
+          "oklch(65% 0.087 162)",
+          "oklch(80% 0.087 162)",
+          "oklch(95% 0.087 162)"
+        ]
+      },
+      "error": {
+        "role": "neutral",
+        "displayName": "Erro",
+        "canonical": "#a53131",
+        "tonalRamp": [
+          "oklch(15% 0.152 25)",
+          "oklch(25% 0.152 25)",
+          "oklch(35% 0.152 25)",
+          "oklch(45% 0.152 25)",
+          "oklch(55% 0.152 25)",
+          "oklch(65% 0.152 25)",
+          "oklch(80% 0.152 25)",
+          "oklch(95% 0.152 25)"
+        ]
+      }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "Título principal do hero." },
-      "headline": { "displayName": "Headline", "purpose": "Títulos de seção e apresentação." },
-      "title": { "displayName": "Title", "purpose": "Títulos de itens de conteúdo." },
-      "body": { "displayName": "Body", "purpose": "Texto corrido e descrições." },
-      "label": { "displayName": "Label", "purpose": "Identificadores curtos em maiúsculas." }
+      "display": {
+        "displayName": "Display",
+        "purpose": "Só o h1 do hero, em primeira pessoa, estreitado (wdth 86), até 13ch."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "h2 de cada faixa, frase com ponto final, wdth 88, até 20ch."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Nomes de disciplina no quadro de serviços, wdth 88."
+      },
+      "title-sm": {
+        "displayName": "Title pequeno",
+        "purpose": "h3 dos passos do processo e do projeto open source; nome no carimbo."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Parágrafo do hero, até 54ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Texto corrido; apoio em muted, 52–58ch."
+      },
+      "label": {
+        "displayName": "Label caps",
+        "purpose": "Rótulos de célula, cabeçalhos de quadro, rótulos de campo e segmentos da cota; alargado (wdth 118), maiúsculas. Nunca como sobretítulo."
+      },
+      "mono": {
+        "displayName": "Mono figuras",
+        "purpose": "Geist Mono tabular para folha, escala, revisão, nº, estrelas, PR e marcadores."
+      }
     },
     "shadows": [],
     "motion": [
-      { "name": "state-transition", "value": "150ms ease", "purpose": "Mudanças de cor de controles e links." },
-      { "name": "smooth-scroll", "value": "scroll-behavior: smooth", "purpose": "Navegação por âncoras, desativada quando há preferência por movimento reduzido." }
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "Curva única para o desenho da cota, a seta e a pressão do botão."
+      },
+      {
+        "name": "dimension-draw",
+        "value": "scaleX(0→1) 640ms var(--ease-out), defasagem calc(var(--i) * 70ms + 120ms)",
+        "purpose": "Único movimento de entrada: a cota em cadeia se desenha uma vez ao carregar."
+      },
+      {
+        "name": "dimension-tick",
+        "value": "opacity 0→1 240ms ease",
+        "purpose": "Traços oblíquos da cota aparecem com seus segmentos."
+      },
+      {
+        "name": "press",
+        "value": "transform: scale(0.97) 140ms var(--ease-out)",
+        "purpose": "Feedback de pressão do botão primário."
+      },
+      {
+        "name": "color",
+        "value": "120–150ms ease",
+        "purpose": "Hover de cor em links, navegação, linhas do quadro e foco de campo; hover só em (hover: hover) and (pointer: fine)."
+      },
+      {
+        "name": "arrow-nudge",
+        "value": "translateX(3px) 180ms var(--ease-out)",
+        "purpose": "Seta do botão e do text-link no hover."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation: none; transition-duration: 0.01ms; scroll-behavior: auto",
+        "purpose": "prefers-reduced-motion: a cota aparece estática e completa."
+      }
     ],
     "breakpoints": [
-      { "name": "tablet", "value": "900px" },
-      { "name": "mobile", "value": "640px" }
+      {
+        "name": "tablet",
+        "value": "960px"
+      },
+      {
+        "name": "mobile",
+        "value": "640px"
+      }
     ]
   },
   "components": [
     {
-      "name": "Primary Button",
+      "name": "Botão primário",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Ação de contato ou envio, preenchida em azul de marca.",
-      "html": "<button class=\"ds-button-primary\">Enviar</button>",
-      "css": ".ds-button-primary { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 0.6rem; border: 1px solid #0b4688; border-radius: 6px; padding: 0.7rem 1.1rem; background: #0b4688; color: #ffffff; font: 600 0.9rem/1.35 Geist, Arial, sans-serif; text-align: center; text-decoration: none; transition: background-color 150ms ease, border-color 150ms ease; cursor: pointer; } .ds-button-primary:hover { border-color: #073a74; background: #073a74; } .ds-button-primary:focus-visible { outline: 2px solid #4c9be0; outline-offset: 3px; } .ds-button-primary:active { background: #073a74; }"
+      "description": "A única cor sólida da página; só leva ao contato ou o envia.",
+      "html": "<a href=\"#contato\" class=\"ds-btn-primary\">Conversar sobre seu projeto <svg class=\"ds-arrow\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-btn-primary { display: inline-flex; min-height: 48px; align-items: center; gap: 0.6rem; border: 0; border-radius: 4px; padding: 0.75rem 1.2rem; background: var(--brand, #0b4688); color: var(--sheet, #fff); font-family: Archivo, system-ui, sans-serif; font-size: 0.95rem; font-weight: 600; line-height: 1.3; text-decoration: none; cursor: pointer; transition: background-color 150ms ease, transform 140ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-arrow { width: 18px; height: 18px; transition: transform 180ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-btn-primary:active { transform: scale(0.97); } .ds-btn-primary:focus-visible { outline: 2px solid var(--focus, #2f7fd1); outline-offset: 3px; } @media (hover: hover) and (pointer: fine) { .ds-btn-primary:hover { background: var(--brand-hover, #073a74); } .ds-btn-primary:hover .ds-arrow { transform: translateX(3px); } }"
     },
     {
-      "name": "Text Link",
+      "name": "Text link",
       "kind": "custom",
-      "description": "Link de apoio em azul com sublinhado no hover.",
-      "html": "<a class=\"ds-text-link\" href=\"#projetos\">Ver projetos públicos <span aria-hidden=\"true\">→</span></a>",
-      "css": ".ds-text-link { display: inline-flex; align-items: center; gap: 0.4rem; color: #0b4688; font: 600 0.92rem/1.4 Geist, Arial, sans-serif; text-decoration: none; text-underline-offset: 0.22em; transition: color 150ms ease; } .ds-text-link:hover { color: #073a74; text-decoration: underline; } .ds-text-link:focus-visible { outline: 2px solid #4c9be0; outline-offset: 3px; }"
+      "refersTo": "text-link",
+      "description": "Ação secundária ao lado do botão; azul com sublinhado diazo.",
+      "html": "<a href=\"#projetos\" class=\"ds-text-link\">Ver o que já publiquei <svg class=\"ds-arrow\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-text-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--brand, #0b4688); font-family: Archivo, system-ui, sans-serif; font-weight: 600; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.22em; text-decoration-color: var(--diazo, #a9bfdb); transition: color 150ms ease, text-decoration-color 150ms ease; } .ds-arrow { width: 18px; height: 18px; transition: transform 180ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-text-link:focus-visible { outline: 2px solid var(--focus, #2f7fd1); outline-offset: 3px; } @media (hover: hover) and (pointer: fine) { .ds-text-link:hover { color: var(--brand-hover, #073a74); text-decoration-color: currentColor; } .ds-text-link:hover .ds-arrow { transform: translateX(3px); } }"
     },
     {
-      "name": "Profile Panel",
-      "kind": "card",
-      "description": "Painel branco e plano para identificar o perfil profissional e suas áreas.",
-      "html": "<article class=\"ds-profile-panel\"><strong>William Koller</strong><p>Engenheiro de software</p><hr><span>Áreas de atuação</span><ul><li>Backend e APIs</li><li>Frontend e produtos web</li></ul></article>",
-      "css": ".ds-profile-panel { border: 1px solid #d7e0e9; border-radius: 10px; padding: 1.5rem; background: #ffffff; color: #34445a; font: 400 0.92rem/1.65 Geist, Arial, sans-serif; } .ds-profile-panel strong { color: #172b46; font-size: 1.1rem; font-weight: 650; } .ds-profile-panel p { margin: 0; color: #5d6d81; font-size: 0.9rem; } .ds-profile-panel hr { height: 1px; margin: 1.5rem 0 1.25rem; border: 0; background: #d7e0e9; } .ds-profile-panel span { color: #5d6d81; font-size: 0.75rem; font-weight: 650; letter-spacing: 0.065em; text-transform: uppercase; } .ds-profile-panel ul { display: grid; gap: 0.65rem; margin: 0.9rem 0 0; padding: 0; list-style: none; }"
-    },
-    {
-      "name": "Project Row",
-      "kind": "custom",
-      "description": "Linha de projeto sem cartão ou sombra, separada por divisória.",
-      "html": "<article class=\"ds-project-row\"><a href=\"#\">clean-ts-api</a><p>TypeScript · 46 estrelas</p></article>",
-      "css": ".ds-project-row { display: flex; min-width: 0; flex-direction: column; justify-content: space-between; gap: 1rem; border-bottom: 1px solid #d7e0e9; padding: 1.35rem 0; color: #5d6d81; font: 400 0.78rem/1.6 Geist, Arial, sans-serif; } .ds-project-row a { color: #172b46; font-size: 1rem; font-weight: 650; text-decoration: none; overflow-wrap: anywhere; } .ds-project-row a:hover { color: #0b4688; text-decoration: underline; } .ds-project-row a:focus-visible { outline: 2px solid #4c9be0; outline-offset: 3px; } .ds-project-row p { margin: 0.45rem 0 0; }"
-    },
-    {
-      "name": "Contact Input",
-      "kind": "input",
-      "refersTo": "contact-input",
-      "description": "Campo de contato branco com label externo e estado de foco azul.",
-      "html": "<label class=\"ds-field\">E-mail<input type=\"email\" placeholder=\"voce@empresa.com\"></label>",
-      "css": ".ds-field { display: grid; gap: 0.35rem; color: #172b46; font: 600 0.86rem/1.4 Geist, Arial, sans-serif; } .ds-field input { width: 100%; min-height: 46px; border: 1px solid #bbc8d6; border-radius: 5px; padding: 0.7rem 0.8rem; background: #ffffff; color: #172b46; font: 400 0.94rem/1.5 Geist, Arial, sans-serif; transition: border-color 150ms ease, box-shadow 150ms ease; } .ds-field input::placeholder { color: #58687c; opacity: 1; } .ds-field input:focus { border-color: #4c9be0; outline: none; box-shadow: 0 0 0 3px rgb(76 155 224 / 15%); } .ds-field input:focus-visible { outline: 2px solid #4c9be0; outline-offset: 3px; }"
-    },
-    {
-      "name": "Primary Navigation",
+      "name": "Cabeçalho",
       "kind": "nav",
-      "description": "Links compactos sobre cabeçalho branco com divisor inferior.",
-      "html": "<nav class=\"ds-primary-nav\"><a href=\"#projetos\">Projetos</a><a href=\"#servicos\">Serviços</a><a href=\"#processo\">Processo</a></nav>",
-      "css": ".ds-primary-nav { display: flex; align-items: center; gap: 1.5rem; border-bottom: 1px solid #d7e0e9; padding: 1rem; background: #ffffff; } .ds-primary-nav a { color: #34445a; font: 500 0.875rem/1.4 Geist, Arial, sans-serif; text-decoration: none; transition: color 150ms ease; } .ds-primary-nav a:hover { color: #0b4688; } .ds-primary-nav a:focus-visible { outline: 2px solid #4c9be0; outline-offset: 3px; }"
+      "refersTo": "site-header",
+      "description": "Borda da folha: fixo, fundo papel, borda diazo, navegação simples por seção e CTA.",
+      "html": "<header class=\"ds-header\"><a class=\"ds-brand\" href=\"#top\">Koller Nexus</a><nav class=\"ds-nav\"><a href=\"#projetos\">Projetos</a><a href=\"#servicos\">Serviços</a><a href=\"#processo\">Processo</a><a href=\"#sobre\">Sobre mim</a></nav><a class=\"ds-cta\" href=\"#contato\">Falar comigo</a></header>",
+      "css": ".ds-header { display: flex; min-height: 64px; align-items: center; justify-content: space-between; gap: 1.5rem; padding-inline: 1.5rem; border-bottom: 1px solid var(--diazo, #a9bfdb); background: var(--paper, #f6f7f4); font-family: Archivo, system-ui, sans-serif; } .ds-brand { color: var(--ink, #1a1f27); font-size: 0.98rem; font-weight: 650; letter-spacing: -0.01em; text-decoration: none; } .ds-nav { display: flex; gap: 1.5rem; } .ds-nav a { color: var(--body, #3b434e); font-size: 0.9rem; font-weight: 500; text-decoration: none; transition: color 150ms ease; } .ds-nav a:focus-visible, .ds-cta:focus-visible, .ds-brand:focus-visible { outline: 2px solid var(--focus, #2f7fd1); outline-offset: 3px; } .ds-cta { display: inline-flex; min-height: 40px; align-items: center; border-radius: 4px; padding: 0.5rem 0.95rem; background: var(--brand, #0b4688); color: var(--sheet, #fff); font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: background-color 150ms ease, transform 140ms cubic-bezier(0.23, 1, 0.32, 1); } .ds-cta:active { transform: scale(0.97); } @media (hover: hover) and (pointer: fine) { .ds-nav a:hover { color: var(--brand, #0b4688); } .ds-cta:hover { background: var(--brand-hover, #073a74); } }"
+    },
+    {
+      "name": "Cota em cadeia",
+      "kind": "custom",
+      "refersTo": "dimension",
+      "description": "Assinatura: mede as cinco disciplinas com traços oblíquos nas juntas e se desenha uma vez ao carregar.",
+      "html": "<ol class=\"ds-dim\"><li style=\"--i:0\">Backend</li><li style=\"--i:1\">Frontend</li><li style=\"--i:2\">Mobile</li><li style=\"--i:3\">DevOps</li><li style=\"--i:4\">IA<span class=\"ds-tick-end\"></span></li></ol>",
+      "css": ".ds-dim { display: flex; margin: 0; padding: 0; list-style: none; color: var(--muted, #5c6470); font-family: Archivo, system-ui, sans-serif; font-size: 0.68rem; font-weight: 600; font-variation-settings: 'wdth' 118; letter-spacing: 0.09em; text-transform: uppercase; } .ds-dim li { position: relative; flex: 1 1 0; padding: 0 0.25rem 0.7rem; text-align: center; white-space: nowrap; } .ds-dim li::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--diazo-strong, #6f8fb8); transform-origin: left center; animation: ds-draw 640ms cubic-bezier(0.23, 1, 0.32, 1) both; animation-delay: calc(var(--i) * 70ms + 120ms); } .ds-dim li::before, .ds-tick-end { content: ''; position: absolute; bottom: -6px; left: -0.5px; width: 1px; height: 13px; background: var(--ink, #1a1f27); transform: rotate(45deg); } .ds-tick-end { left: auto; right: -0.5px; } @keyframes ds-draw { from { transform: scaleX(0); } } @media (prefers-reduced-motion: reduce) { .ds-dim li::after { animation: none; } }"
+    },
+    {
+      "name": "Carimbo",
+      "kind": "card",
+      "refersTo": "title-block",
+      "description": "Bloco de título da prancha: contorno de tinta, células com rótulos caps e valores mono.",
+      "html": "<aside class=\"ds-tb\"><div class=\"ds-tb-row\"><div class=\"ds-tb-cell\"><p class=\"ds-caps\">Responsável técnico</p><p class=\"ds-tb-name\">William Koller</p><p class=\"ds-tb-val\">Engenheiro de software</p></div></div><div class=\"ds-tb-row ds-tb-2\"><div class=\"ds-tb-cell\"><p class=\"ds-caps\">Cidade</p><p class=\"ds-tb-val\">Curitiba, PR</p></div><div class=\"ds-tb-cell\"><p class=\"ds-caps\">Atendimento</p><p class=\"ds-tb-val\">Remoto</p></div></div></aside>",
+      "css": ".ds-tb { max-width: 440px; border: 1.5px solid var(--ink, #1a1f27); background: var(--sheet, #fff); font-family: Archivo, system-ui, sans-serif; } .ds-tb-row { display: grid; border-bottom: 1px solid var(--rule, #d9dee3); } .ds-tb-row:last-child { border-bottom: 0; } .ds-tb-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } .ds-tb-cell { padding: 0.75rem 1rem 0.85rem; } .ds-tb-cell + .ds-tb-cell { border-left: 1px solid var(--rule, #d9dee3); } .ds-caps { margin: 0 0 0.3rem; color: var(--muted, #5c6470); font-size: 0.68rem; font-weight: 600; font-variation-settings: 'wdth' 118; letter-spacing: 0.09em; line-height: 1.3; text-transform: uppercase; } .ds-tb-name { margin: 0; color: var(--ink, #1a1f27); font-size: 1.3rem; font-weight: 650; letter-spacing: -0.015em; line-height: 1.2; } .ds-tb-val { margin: 0; color: var(--ink, #1a1f27); font-size: 0.95rem; } .ds-mono { font-family: 'Geist Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Quadro de especificação",
+      "kind": "custom",
+      "refersTo": "schedule-row-hover",
+      "description": "Projetos como tabela de colunas fixas entre réguas de tinta; hover pinta a linha de diazo-wash.",
+      "html": "<table class=\"ds-sched\"><thead><tr><th class=\"ds-num\">Nº</th><th>Repositório</th><th class=\"ds-stars\">Estrelas</th></tr></thead><tbody><tr><td class=\"ds-num ds-mono\">01</td><td><a href=\"#\" class=\"ds-name\">go-clean-api</a><span class=\"ds-desc\">API em Go com arquitetura limpa.</span></td><td class=\"ds-stars ds-mono\">42</td></tr><tr><td class=\"ds-num ds-mono\">02</td><td><a href=\"#\" class=\"ds-name\">next-observability</a><span class=\"ds-desc\">Telemetria para Next.js.</span></td><td class=\"ds-stars ds-mono\">17</td></tr></tbody></table>",
+      "css": ".ds-sched { width: 100%; border-collapse: collapse; border-top: 1.5px solid var(--ink, #1a1f27); border-bottom: 1.5px solid var(--ink, #1a1f27); background: var(--sheet, #fff); font-family: Archivo, system-ui, sans-serif; } .ds-sched th { border-bottom: 1px solid var(--ink, #1a1f27); padding: 0.6rem 1rem; color: var(--muted, #5c6470); font-size: 0.68rem; font-weight: 600; font-variation-settings: 'wdth' 118; letter-spacing: 0.09em; text-transform: uppercase; text-align: left; } .ds-sched td { border-top: 1px solid var(--rule, #d9dee3); padding: 0.95rem 1rem; vertical-align: baseline; } .ds-sched tbody tr:first-child td { border-top: 0; } .ds-sched tbody tr { transition: background-color 120ms ease; } .ds-num { width: 3.5rem; color: var(--muted, #5c6470); font-size: 0.8rem; } .ds-stars { width: 7rem; text-align: right !important; color: var(--ink, #1a1f27); font-size: 0.85rem; } .ds-mono { font-family: 'Geist Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; } .ds-name { color: var(--ink, #1a1f27); font-weight: 600; text-decoration: none; } .ds-name:focus-visible { outline: 2px solid var(--focus, #2f7fd1); outline-offset: 3px; } .ds-desc { display: block; margin-top: 0.2rem; color: var(--muted, #5c6470); font-size: 0.9rem; line-height: 1.5; } @media (hover: hover) and (pointer: fine) { .ds-sched tbody tr:hover { background: var(--diazo-wash, #edf2f8); } .ds-sched tbody tr:hover .ds-name { color: var(--brand, #0b4688); text-decoration: underline; } }"
+    },
+    {
+      "name": "Marcadores de detalhe",
+      "kind": "custom",
+      "refersTo": "detail-marker",
+      "description": "Passos do processo como chamadas de detalhe numeradas, ligadas por uma linha diazo-strong.",
+      "html": "<ol class=\"ds-proc\"><li><span class=\"ds-marker\">1</span><h3>Descoberta</h3><p>Começo entendendo o contexto.</p></li><li><span class=\"ds-marker\">2</span><h3>Arquitetura</h3><p>Definimos domínios e contratos.</p></li><li><span class=\"ds-marker\">3</span><h3>Entrega iterativa</h3><p>Incrementos pequenos, com testes.</p></li></ol>",
+      "css": ".ds-proc { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; margin: 0; padding: 0; list-style: none; font-family: Archivo, system-ui, sans-serif; } .ds-proc::before { content: ''; position: absolute; top: 1.25rem; left: 1.25rem; right: 0; height: 1px; background: var(--diazo-strong, #6f8fb8); } .ds-proc li { position: relative; display: grid; gap: 0.5rem; align-content: start; } .ds-marker { display: grid; width: 2.5rem; height: 2.5rem; margin-bottom: 0.9rem; place-items: center; border: 1.5px solid var(--ink, #1a1f27); border-radius: 50%; background: var(--paper, #f6f7f4); color: var(--ink, #1a1f27); font-family: 'Geist Mono', ui-monospace, monospace; font-size: 0.85rem; font-weight: 600; } .ds-proc h3 { margin: 0; color: var(--ink, #1a1f27); font-size: 1.2rem; font-weight: 640; letter-spacing: -0.01em; line-height: 1.3; } .ds-proc p { margin: 0; color: var(--muted, #5c6470); font-size: 0.98rem; }"
+    },
+    {
+      "name": "Formulário de células",
+      "kind": "input",
+      "refersTo": "form-field",
+      "description": "Campos como células de prancha: rótulo caps, entrada sem borda, fundo diazo-wash e contorno interno no foco.",
+      "html": "<form class=\"ds-form\"><div class=\"ds-field\"><label class=\"ds-caps\" for=\"ds-nome\">Nome</label><input id=\"ds-nome\" placeholder=\"Seu nome\"></div><div class=\"ds-field\"><label class=\"ds-caps\" for=\"ds-msg\">Mensagem</label><textarea id=\"ds-msg\" rows=\"3\" placeholder=\"O que você está construindo?\"></textarea></div></form>",
+      "css": ".ds-form { max-width: 520px; border: 1.5px solid var(--ink, #1a1f27); background: var(--sheet, #fff); font-family: Archivo, system-ui, sans-serif; } .ds-field { display: grid; gap: 0.2rem; border-bottom: 1px solid var(--field-rule, #7d8fa6); padding: 0.8rem 1rem 0.6rem; transition: background-color 150ms ease; } .ds-field:focus-within { background: var(--diazo-wash, #edf2f8); } .ds-field:has(:focus-visible) { outline: 2px solid var(--focus, #2f7fd1); outline-offset: -2px; } .ds-caps { color: var(--muted, #5c6470); font-size: 0.68rem; font-weight: 600; font-variation-settings: 'wdth' 118; letter-spacing: 0.09em; line-height: 1.3; text-transform: uppercase; } .ds-field input, .ds-field textarea { width: 100%; border: 0; padding: 0.25rem 0; background: transparent; color: var(--ink, #1a1f27); font: inherit; font-size: 1rem; line-height: 1.5; } .ds-field input:focus, .ds-field textarea:focus { outline: none; }"
     }
   ],
   "narrative": {
-    "northStar": "O portfólio de engenharia claro e verificável",
-    "overview": "Koller Nexus apresenta serviços, trabalho público e contato numa linguagem profissional, direta e legível. A estrutura combina papel branco, planos azulados suaves, texto em azul-marinho e azul reservado para ações e referências interativas. Geist dá unidade às mensagens e Geist Mono destaca a numeração técnica do processo. A assinatura usa o recorte quadrado `public/koller-nexus-mark.png`, derivado da imagem fornecida; o social card usa `public/koller-nexus-og.jpg`, e o favicon e Apple icon usam o recorte quadrado. A imagem-fonte `public/koller-nexus.png` é JPEG de 1280×720 apesar da extensão `.png`; foi preservada e recebeu origem embutida.\n\nO ritmo é aberto, com conteúdo alinhado a um container central, títulos concisos e linhas finas separando listas. A navegação, os projetos, as contribuições, as competências e o processo são apresentados como informação concreta, sem efeitos decorativos. O bloco de contato fecha a página em alto contraste, usando a cor de tinta como fundo e um formulário branco.",
-    "keyCharacteristics": ["Superfícies claras com contraste tipográfico profundo.", "Azul usado para ações, links e pequenos marcadores.", "Listas e divisórias substituem cartões elevados.", "Conteúdo responsivo em português brasileiro."],
-    "rules": [
-      { "name": "The Blue-Action Rule", "body": "Reserve o azul de marca para ações, links e pequenos indicadores; mantenha áreas extensas nas superfícies claras ou na tinta marinho já usada no contato.", "section": "colors" },
-      { "name": "The Short-Measure Rule", "body": "Preserve a leitura em blocos curtos: títulos têm largura limitada em `ch`, e descrições não se estendem pela largura inteira do container.", "section": "typography" },
-      { "name": "The Flat-By-Default Rule", "body": "Não introduza sombras para elevar listas ou blocos; use as superfícies e linhas existentes para separar conteúdo.", "section": "elevation" }
+    "northStar": "A Prancha Técnica",
+    "overview": "O site é uma folha de desenho técnico assinada: papel de desenho branco-frio, linhas em tinta grafite, traços azul-diazo para réguas, cotas e chamadas, e um carimbo com a foto, o nome e o cargo de quem responde pelo trabalho. A referência é o jogo de pranchas do modernismo brasileiro em cópia heliográfica, lido como documento de engenharia e não como fantasia. Cada linha na página mede ou aponta algo real: a cota em cadeia mede as cinco disciplinas da oferta, o quadro de projetos lista repositórios ordenados ao vivo pelo GitHub, o processo aparece como chamadas de detalhe numeradas.\n\nA densidade é de prancha, não de vitrine: uma moldura única corre a altura inteira da página, as seções são faixas separadas por uma régua diazo, e o conteúdo vive em células com bordas de tinta e rótulos em versalete minúsculo. Não há cartões, sombras, gradientes, vidro nem brilho escuro. A única cor sólida preenchida é o azul da marca, e ela pertence à ação de contato.\n\nA voz é sempre a primeira pessoa de William (\"Construo\", \"Quem lê e responde sou eu\"). A página recusa o splash genérico de portfólio dev (hero com gradiente, grade de cartões, glow escuro) e a voz impessoal de agência.",
+    "keyCharacteristics": [
+      "Moldura única de até 1200px com bordas laterais diazo, do cabeçalho ao rodapé.",
+      "Faixas (bands) empilhadas, separadas por uma régua diazo de 1px.",
+      "Carimbo, quadro de especificação, quadro de revisões e formulário em células com borda de tinta de 1,5px.",
+      "Archivo variável com eixo de largura: títulos estreitados, rótulos em versalete alargados.",
+      "Geist Mono com algarismos tabulares para tudo que é medida.",
+      "Um único momento de movimento autoral: a cota em cadeia se desenha uma vez ao carregar."
     ],
-    "dos": ["Do mantenha superfícies brancas e azuladas, texto marinho e azul de ação nos usos já definidos.", "Do use linhas finas e listas abertas para organizar projetos, competências e etapas.", "Do mantenha a hierarquia Geist e use Geist Mono para numeração técnica.", "Do preserve os layouts em uma coluna em telas estreitas e o foco visível nos controles."],
-    "donts": ["Don't adicione gradientes, vidro, sombras decorativas ou ilustrações genéricas.", "Don't transforme cada item de lista em cartão elevado.", "Don't use o azul de ação como preenchimento de grandes áreas; o contato já possui seu tratamento escuro próprio.", "Don't sacrifique labels dos campos, foco visível ou a adaptação responsiva."]
+    "rules": [
+      {
+        "name": "The One Solid Fill Rule",
+        "body": "O azul da marca é a única cor preenchida em blocos, e só nos botões que levam ao contato ou o enviam. Nenhuma outra superfície recebe cor sólida; o resto é papel, folha e linha.",
+        "section": "colors"
+      },
+      {
+        "name": "The Diazo Measures Rule",
+        "body": "Diazo é cor de linha, não de superfície. Use diazo para molduras e réguas, diazo-strong para linhas que medem ou apontam, e diazo-wash só como resposta a estado (hover, foco).",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Widths Rule",
+        "body": "Títulos são estreitos (wdth 86–88), rótulos são largos (wdth 118). Corpo fica na largura padrão. Nunca inverta.",
+        "section": "typography"
+      },
+      {
+        "name": "The Mono Measures Rule",
+        "body": "Geist Mono só aparece em número que mede, conta ou identifica (folha, escala, revisão, nº, estrelas, PR). Texto corrido nunca é mono.",
+        "section": "typography"
+      },
+      {
+        "name": "The Line Weight Rule",
+        "body": "Três pesos, três funções: 1,5px em tinta contorna uma peça, 1px em tinta separa cabeçalho de corpo dentro dela, 1px em régua fina divide linhas e células. Diazo 1px é a construção da página.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Flat Sheet Rule",
+        "body": "Nada flutua. Se um elemento precisa se destacar, ele ganha uma borda de tinta ou o azul da ação, nunca uma sombra.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do manter tudo dentro da moldura única de até 1200px, com faixas separadas por régua diazo de 1px.",
+      "Do desenhar peças (carimbo, quadros, formulário) como folha branca com contorno de tinta de 1,5px e células divididas por régua fina.",
+      "Do reservar o preenchimento brand para os botões que levam ao contato ou o enviam.",
+      "Do fazer cada linha medir ou apontar algo real: cota que mede disciplinas, linha de chamada que liga passos, régua que separa dados.",
+      "Do rotular dados com caps em wdth 118 e escrever medidas em Geist Mono tabular.",
+      "Do escrever em primeira pessoa, com a voz de William, e títulos como frases com ponto final.",
+      "Do manter o desenho da cota como o único movimento de entrada e respeitar prefers-reduced-motion.",
+      "Do colocar hover atrás de (hover: hover) and (pointer: fine) e dar feedback de pressão com scale(0.97)."
+    ],
+    "donts": [
+      "Don't usar sombras, gradientes, vidro, desfoque ou brilho escuro.",
+      "Don't usar cartões arredondados nem grades de cartões; cantos são quadrados, exceto controles (4px) e marcadores de detalhe (círculo).",
+      "Don't preencher qualquer superfície com azul ou outra cor sólida além do botão de contato; diazo-wash só como estado.",
+      "Don't adicionar linhas, réguas ou cotas decorativas que não medem nada (régua de pixels, códigos de índice de folha na navegação).",
+      "Don't colocar sobretítulos (eyebrows) acima dos títulos; o versalete rotula dados em células.",
+      "Don't usar mono em texto corrido nem animar seções ao rolar.",
+      "Don't escrever na voz impessoal de agência (\"nossa equipe\", \"nossos especialistas\")."
+    ]
   }
 }

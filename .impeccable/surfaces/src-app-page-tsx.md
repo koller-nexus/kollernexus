@@ -2,7 +2,7 @@
 version: 1
 slug: "src-app-page-tsx"
 primary_target: "src/app/page.tsx"
-related_targets: ["src/app/globals.css","src/components/Header.tsx","src/components/Footer.tsx","src/components/Projects.tsx","src/components/OpenSource.tsx","src/components/ContactForm.tsx"]
+related_targets: ["src/app/globals.css","src/app/layout.tsx","src/components/Header.tsx","src/components/Footer.tsx","src/components/Projects.tsx","src/components/OpenSource.tsx","src/components/ContactForm.tsx"]
 ---
 
 # Home page
@@ -13,20 +13,20 @@ Audience: founders, CTOs and technology recruiters evaluating software engineeri
 
 Primary action: start a conversation about a project. Secondary action: inspect public work and open source contributions.
 
-Proof: existing public GitHub repositories and linked contribution records. Preserve the services, process, contact form and its API behavior. Do not add unverified clients, testimonials, outcomes, credentials or metrics.
+Proof: existing public GitHub repositories and linked contribution records, plus William's real portrait (owner-supplied photo). Preserve the services, process, contact form and its API behavior, the brand blue, the KN mark and the section order. Do not add unverified clients, testimonials, outcomes, credentials or metrics.
 
-Constraints: light, conventional professional presentation; responsive and accessible; maintain Koller Nexus identity and Portuguese Brazilian copy.
+Voice: first person, William speaking (approved by the owner). Facts unchanged.
 
 ## Direction contract
 
-**THESIS:** A professional portfolio that makes the engineering offer, public work and next step easy to assess. Refuse the generic agency splash page and its unsupported claims.
+**THESIS:** The site is a signed engineering drawing sheet: one responsible person, measured work, human scale. Refuses the generic dev-portfolio splash (gradient hero, card grid, dark glow) and the faceless agency voice.
 
-**OWN-WORLD:** A clear business portfolio in white and pale blue surfaces, deep ink text, restrained blue links and compact technical labels. Use the existing sans family, thin rules, open layouts and direct controls; no glass, gradients, decorative dashboards or stock illustration.
+**OWN-WORLD:** Cool off-white drawing paper, graphite ink, pale diazo-blue linework for rules, dimension lines and callouts; brand blue #0b4688 is the only solid fill and belongs to the contact action. Title-block (carimbo) panels with ruled cells and tiny caps labels; tabular mono figures for measures. No shadows, no gradients, no glass, no rounded cards.
 
-**STORY:** Visitors recognize the engineering services, inspect public repositories and contributions, understand the working process, then contact William Koller. The memorable proof is the real open source work and repository list, not a fabricated metric.
+**STORY:** The visitor meets William (photo, name, first-person line), reads his work as a specification schedule ranked live from GitHub, sees services and process as numbered detail callouts, and signs off by writing to him.
 
-**FIRST VIEWPORT:** A compact header with logo, section navigation and contact action. Below, a two-column hero places a concise service statement and primary contact action on the left; on the right, a clearly labeled professional profile panel identifies William Koller and the existing engineering disciplines. A visible secondary link leads to public projects.
+**FIRST VIEWPORT:** Left 7 columns: small sheet label, large first-person headline, one paragraph, solid blue CTA and a text link. Right 5 columns: the carimbo — owner-supplied portrait, name, "responsável técnico", city (Curitiba, PR) and remote-service cells, links — in ruled cells. A chained dimension line (cota em cadeia) under the lead measures the offer itself: one segment per discipline, oblique ticks at each joint (a pixel measure was rejected as decoration). Header is a slim sheet edge with plain section navigation (sheet-index codes rejected as costume).
 
-**FORM:** Impeccable’s Pick; the first of seven grounded directions (seed key `95efc838`). Code-led implementation: standard professional portfolio topology, project list, services, process, profile and contact. The contact form continues to post to the existing API.
+**FORM:** Prancha Técnica (Brazilian modernist drawing set, diazo print); fifth of seven grounded directions; seed key 88f6be9c. Raises: one action color only (from creator-hardware bench); projects as a live-ranked spec schedule with fixed columns (from split-flap board); process as numbered detail callouts (from sewing pattern). Code-led. Signature interaction: the hero's chained dimension line draws itself once on load (CSS, reduced-motion: static); one authored moment, not per-section reveals. Services render as a ruled callout schedule.
 
-**FINISH:** unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance

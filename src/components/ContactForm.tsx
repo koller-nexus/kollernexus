@@ -32,50 +32,49 @@ export default function ContactForm() {
 
   return (
     <form className="contact-form" aria-describedby="form-note" onSubmit={onSubmit}>
-      <div className="form-field">
-        <label htmlFor="nome">
-          Nome
-        </label>
-        <input
-          id="nome"
-          name="nome"
-          placeholder="Seu nome"
-          autoComplete="name"
-          className="form-input"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-          minLength={2}
-          maxLength={100}
-        />
+      <div className="form-row">
+        <div className="form-field">
+          <label htmlFor="nome" className="caps">
+            Nome
+          </label>
+          <input
+            id="nome"
+            name="nome"
+            placeholder="Seu nome"
+            autoComplete="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+            minLength={2}
+            maxLength={100}
+          />
+        </div>
+        <div className="form-field">
+          <label htmlFor="email" className="caps">
+            E-mail
+          </label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="voce@empresa.com"
+            autoComplete="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            maxLength={254}
+          />
+        </div>
       </div>
       <div className="form-field">
-        <label htmlFor="email">
-          E-mail
-        </label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          placeholder="voce@empresa.com"
-          autoComplete="email"
-          className="form-input"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          maxLength={254}
-        />
-      </div>
-      <div className="form-field">
-        <label htmlFor="mensagem">
+        <label htmlFor="mensagem" className="caps">
           Mensagem
         </label>
         <textarea
           id="mensagem"
           name="mensagem"
-          placeholder="Conte um pouco sobre o desafio"
-          rows={5}
-          className="form-textarea"
+          placeholder="O que você está construindo e onde posso ajudar?"
+          rows={6}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           required
@@ -85,16 +84,16 @@ export default function ContactForm() {
       </div>
       <div className="contact-form-footer">
         <p id="form-note" className="contact-form-note">
-          Seus dados serão usados apenas para retorno de contato.
+          Uso seus dados só para responder a esta mensagem.
         </p>
         <button className="button-primary" disabled={status === "loading"}>
-          {status === "loading" ? "Enviando..." : "Enviar"}
+          {status === "loading" ? "Enviando…" : "Enviar mensagem"}
         </button>
       </div>
 
       {status === "success" && (
         <p role="status" className="form-status form-status--success">
-          Mensagem enviada com sucesso.
+          Recebi sua mensagem. Respondo no e-mail que você informou.
         </p>
       )}
       {status === "error" && (

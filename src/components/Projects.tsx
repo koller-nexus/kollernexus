@@ -1,3 +1,5 @@
+import StarIcon from "@/icons/Star";
+
 type Repo = {
   id: number;
   name: string;
@@ -54,52 +56,71 @@ export default async function Projects() {
   const repos = sortAndTake(await fetchRepos());
 
   return (
-    <section id="projetos" className="section projects-section">
-      <div className="container">
-        <div className="section-intro">
-          <h2>Projetos públicos no GitHub.</h2>
+    <section id="projetos" className="band" aria-labelledby="projetos-heading">
+      <div className="frame">
+        <div className="section-head">
+          <h2 id="projetos-heading">O que está publicado no meu GitHub.</h2>
           <p>
-            Repositórios de <strong>@williamkoller</strong>, atualizados a
-            partir do GitHub e organizados por estrelas.
+            Repositórios públicos que mantenho como <strong>@williamkoller</strong>,
+            com código aberto para você ler antes de conversar comigo.
           </p>
         </div>
 
-        <ul className="project-list">
-          {repos.map((repo) => (
-            <li key={repo.id} className="project-row">
-              <div className="project-copy">
-                <h3>
-                  <a href={repo.html_url} target="_blank" rel="noreferrer">
+        <table className="schedule">
+          <thead>
+            <tr>
+              <th scope="col" className="col-num caps">Nº</th>
+              <th scope="col" className="caps">Repositório</th>
+              <th scope="col" className="col-lang caps">Linguagem</th>
+              <th scope="col" className="col-stars caps">Estrelas</th>
+            </tr>
+          </thead>
+          <tbody>
+            {repos.map((repo, index) => (
+              <tr key={repo.id}>
+                <td className="col-num mono">
+                  {String(index + 1).padStart(2, "0")}
+                </td>
+                <td>
+                  <a
+                    href={repo.html_url}
+                    className="schedule-name"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     {repo.name}
                   </a>
-                </h3>
-                {repo.description && <p>{repo.description}</p>}
-              </div>
-              <div className="project-meta">
-                <span>{repo.language ?? "Linguagem não informada"}</span>
-                <span>
-                  <StarIcon /> {repo.stargazers_count} estrelas
-                </span>
-              </div>
-            </li>
-          ))}
-        </ul>
+                  {repo.description && (
+                    <span className="schedule-desc">
+                      {repo.description.replace(/\p{Extended_Pictographic}\uFE0F?\s*/gu, "")}
+                    </span>
+                  )}
+                </td>
+                <td className="col-lang">{repo.language ?? "—"}</td>
+                <td className="col-stars mono">
+                  <StarIcon />
+                  {repo.stargazers_count}
+                  <span className="sr-only"> estrelas</span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <p className="drawing-caption">
+          <span>
+            <strong>Quadro de projetos.</strong> Ordenado por estrelas, direto da
+            API do GitHub e atualizado a cada hora.
+          </span>
+          <a
+            href="https://github.com/williamkoller?tab=repositories"
+            className="text-link"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Todos os repositórios
+          </a>
+        </p>
       </div>
     </section>
-  );
-}
-
-function StarIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      aria-hidden="true"
-      className="h-4 w-4"
-      style={{ color: "var(--brand)" }}
-    >
-      <path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.402 8.168L12 18.896l-7.336 3.869 1.402-8.168L.132 9.21l8.2-1.192L12 .587z" />
-    </svg>
   );
 }
